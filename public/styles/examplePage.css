@@ -1,0 +1,619 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+/*
+Czcionka elegancka{
+  font-family: "Great Vibes", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+czcionka głowna {
+.libre-baskerville-regular {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.libre-baskerville-bold {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.libre-baskerville-regular-italic {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+}
+#FFC0CB – pastelowy róż
+#D4AF37 – złoty
+#A9A9A9  – delikatny szary
+*/
+:root{
+    --zloty: #D4AF37;
+    --szary: #fbfbfb;
+    --rozowy: #FFC0CB;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0px auto;
+    /*background: rgb(255,192,203);
+    background: linear-gradient(-90deg, rgba(255,192,203,0.51111231) 0%, rgba(255,255,255,1) 59%);
+    font-family: "Libre Baskerville", serif;*/
+    font-weight: 500;
+}
+button{
+    font-family: "Libre Baskerville", serif;
+    font-weight: 500;
+}
+/* menu nawigacyjne */
+nav.menuDesktopRightBar{
+    position: fixed;
+    right: 30px;
+    top: 10%;
+    z-index: 999;
+    right: -200px;
+    transition: 0.3s ease-in-out;
+}
+nav.menuDesktopRightBar ul{
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    gap: 12px;
+    flex-direction: column;
+}
+nav.menuDesktopRightBar ul li{
+    z-index: 100;
+}
+nav.menuDesktopRightBar ul li a{
+    display: block;
+    height: 20px;
+    width: 20px;
+    background-color: #fff;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    text-decoration: none;
+    border-radius: 100%;
+    color: var(--rozowy);
+    position: relative;
+    z-index: 1000;
+    right: -200px;
+}
+nav.menuDesktopRightBar ul li a:hover{
+    background-color:var(--rozowy);
+    color: #fff;
+    transition: all 0.3s ease-in-out;
+}
+nav.menuDesktopRightBar ul li a span{
+    visibility: hidden;
+    width: 0px;
+    position: absolute;
+    left: -80px; 
+    z-index: -100;
+    background: rgb(255,192,203);
+background: linear-gradient(270deg, rgba(255,192,203,0) 0%, rgba(255,192,203,1) 28%);
+    color: #fff;
+    transition: all 0.3s ease-in-out;
+    font-size: 0.9rem;
+    height: 20px;
+    padding: 12px;
+    padding: auto;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    border-radius: 20px 0px 0px 20px;
+}
+nav.menuDesktopRightBar ul li a:hover span{
+    visibility: visible;
+    width: 120px;
+    left: -120px;
+    z-index: 0;
+
+}
+/* menu górne */
+.headerContent{
+    width: 100%;
+    height: 80px;
+    position: absolute;
+    top: 0px;
+    left: 0px; 
+    display: flex;
+    align-items: center;
+}
+.headerContent .menu{
+    width: 100%;
+    margin: 0px auto;
+    display: flex;
+    align-items: center;
+}
+.headerContent .menu a{
+    text-decoration: none;
+    color: var(--zloty);
+    font-size: 0.9rem;
+    background-color: #fbfbfb;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-style: italic;
+    padding: 6px 12px;
+    border-radius: 6px;
+    margin-right: 12px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    transition: all 0.3s ease-in-out;
+}
+.headerContent .menu a:hover{
+    background-color: var(--zloty);
+    color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+/* ogólne */
+h2{
+    font-weight: 500;
+    font-style: italic;
+    font-size: 2rem;
+    margin: 0px;
+    margin-bottom: 24px;
+    margin-top: 12px;
+    text-align: center;
+}
+.buttonLink{
+    display: block;
+    margin: 0px auto;
+    padding: 12px 24px;
+    background-color: #D4AF37;
+    margin-top: 24px;
+    min-width: 120px;
+    max-width: 190px;
+    font-size: 0.9rem;
+    text-decoration: none;
+    border-radius: 12px;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+    border: 2px solid var(--zloty);
+}
+.buttonLink:hover{
+    background-color: #fff;
+    color: var(--zloty);
+}
+/* sekcja home */
+section.home{
+    height: 100vh;
+    width: 100%;
+}
+section.home img{
+    width: 100%;
+    height: 100vh;
+    clip-path: circle(54.3% at 15% 49%);
+    position: absolute;
+    object-fit: cover;
+    opacity: 0.5;
+
+    transition: 1s ease-in-out;
+    transform: translateX(-200px);
+}
+.contentHome{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    height: 100vh;
+}
+.contentHome .box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+.contentHome .box h1{
+    font-family: "Great Vibes", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 5.2rem;
+    opacity: 0;
+    transition: 1s ease-in-out;
+}
+.contentHome .box p{
+    font-size: 1.4rem;
+    opacity: 0;
+    transition: 1s ease-in-out;
+}
+.contentHome .box #countdown{
+    transition: 1s ease-in-out;
+    opacity: 0;
+}
+.contentHome .box #countdown ul{
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+}
+.contentHome .box #countdown ul li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 12px;
+    background-color: #fff;
+    border-radius: 12px;
+}
+/* sekcja atrakcje */
+section.attractions{
+    width: 100%;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    margin-top: 124px;
+    margin-bottom: 124px;
+}
+.contentAttractions{
+    max-width: 1200px;
+    min-height: 200px;
+    margin: 0px auto;
+    text-align: center;
+}
+
+/* lista atrakcji */
+.contentAttractions ul{
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin: 0px;
+    padding: 0px;
+    max-width: 1200px;
+}
+.contentAttractions ul li{
+    display: grid;
+    grid-template-columns: 0.4fr 1.4fr;
+    height: 80px;
+    background-color: var(--szary);
+    padding: 12px;
+    border-radius: 24px;
+    box-shadow: 4px 4px 10px 1px var(--szary);
+}
+.contentAttractions ul li .icons{
+    grid-row: span 2 / span 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3em;
+    color: #fff;
+    text-shadow: 1px 1px var(--rozowy), -1px -1px var(--rozowy), -1px 1px var(--rozowy), 1px -1px var(--rozowy);
+}
+.contentAttractions ul li h4{
+    margin: 0px;
+    text-align: left;
+}
+.contentAttractions ul li p{
+    grid-column-start: 2;
+    grid-row-start: 2;
+    margin: 0px;
+    text-align: left;
+}
+/* sekcja miejc */
+section.place{
+    width: 100%;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    margin-top: 64px;
+    margin-bottom: 64px;
+}
+/* miejsce ślubu*/
+.weddingPlace{
+    width: 100%;
+    min-height: 400px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 64px;
+    padding-top: 12px;
+}
+.weddingPlace img{
+    width: 100%;
+    clip-path: polygon(100% 0, 60% 0, 50% 100%, 100% 100%);
+    position: absolute;
+    object-fit: cover;
+    max-height: 450px;
+    object-position: 250px;
+}
+.weddingPlace .weddingPlaceContent{
+    width: 1200px;
+    margin: 0px auto;
+    min-height: 400px;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    z-index: 10;
+}
+.weddingPlace .weddingPlaceContent .box{
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 400px;
+}
+.weddingPlace .weddingPlaceContent .box h3{
+    font-family: "Great Vibes", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3rem;
+    margin: 0px;
+}
+.weddingPlace .weddingPlaceContent .box ul{
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+}
+.weddingPlace .weddingPlaceContent .box ul li{
+    max-width: 80%;
+    text-align: center;
+}
+.weddingPlace .weddingPlaceContent .box ul li h4{
+    font-weight: 500;
+    font-style: italic;
+    font-size: 1.4rem;
+    margin: 0px;
+    margin-bottom: 24px;
+    margin-top: 12px;
+}
+.weddingPlace .weddingPlaceContent .box ul li p{
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    line-height: 24px;
+    display: block;
+    padding: 12px;
+    background-color: var(--szary);
+    border-radius: 12px;
+    box-shadow: 4px 4px 10px 1px var(--szary);
+}
+
+/* miejsce wesela */
+.weddingReceptionPlace{
+    width: 100%;
+    min-height: 400px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 24px;
+    margin-bottom: 64px;
+}
+.weddingReceptionPlace img{
+    width: 100%;
+    clip-path: polygon(0 0, 50% 0, 40% 100%, 0 100%);
+    position: absolute;
+    object-fit: cover;
+    max-height: 450px;
+}
+.weddingReceptionPlace .weddingReceptionPlaceContent{
+    width: 1200px;
+    margin: 0px auto;
+    min-height: 400px;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    z-index: 10;
+}
+.weddingReceptionPlace .weddingReceptionPlaceContent .box{
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 400px;
+}
+.weddingReceptionPlace .weddingReceptionPlaceContent .box h3{
+    font-family: "Great Vibes", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3rem;
+    margin: 0px;
+}
+.weddingReceptionPlace .weddingReceptionPlaceContent .box ul{
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+}
+.weddingReceptionPlace .weddingReceptionPlaceContent .box ul li{
+    max-width: 80%;
+    text-align: center;
+}
+.weddingReceptionPlace .weddingReceptionPlaceContent .box ul li h4{
+    font-weight: 500;
+    font-style: italic;
+    font-size: 1.4rem;
+    margin: 0px;
+    margin-bottom: 24px;
+    margin-top: 12px;
+}
+.weddingReceptionPlace .weddingReceptionPlaceContent .box ul li p{
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    line-height: 24px;
+}
+/* lista obecności */
+section.presence{
+    width: 100%;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+}
+.presenceContent{
+    width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    margin: 0px auto;
+}
+.presenceContent form{
+    width: 600px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 12px;
+}
+.presenceContent form .box:nth-child(3){
+    grid-column: span 2 / span 2;
+    grid-row-start: 2;
+    display: flex;
+    flex-direction: column;
+}
+.presenceContent form .box:nth-child(4){
+    grid-column: span 2 / span 2;
+    grid-row-start: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.presenceContent form .box label{
+    font-size: 13px;
+}
+.presenceContent form .box input{
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    box-sizing: border-box;
+    border-radius: 6px;
+    outline: none;
+    border: none;
+}
+.presenceContent form .box button{
+    padding: 12px 24px;
+    background-color: var(--zloty);
+    outline: none;
+    border: 2px solid var(--zloty);
+    color: #fff;
+    font-size: 0,.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border-radius: 12px; 
+    text-transform: uppercase;
+}
+.presenceContent form .box button:hover{
+    background-color: #fff;
+    color: var(--zloty);
+}
+/* gift section */
+.gifts{
+    padding-top: 24px;
+    padding-bottom: 24px;
+    margin-bottom: 64px;
+    margin-top: 124px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.gifts img{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    object-fit: cover;
+    height: 400px;
+    z-index: -1;
+}
+.giftsContent{
+    width: 800px;
+    min-height: 400px;
+    margin: 0px auto;
+    z-index: 10;
+    padding: 24px;
+    border-radius: 24px;
+    margin-top: 64px;
+    background: rgb(255,192,203);
+background: linear-gradient(270deg, rgba(255,224,229,1) 0%, rgba(255,255,255,1) 23%);
+}
+
+.giftsContent ul{
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+.giftsContent ul li{
+    width: 100%;
+    padding: 24px;
+    font-size: 1.2rem;
+    display: grid;
+    grid-template-columns: 1.6fr 1.2fr 0.2fr;
+    border-radius: 24px;
+    box-sizing: border-box;
+    margin-bottom: 12px;
+    background-color: var(--szary);
+    border-radius: 12px;
+    box-shadow: 4px 4px 10px 1px var(--szary);
+}
+.giftsContent ul li span{
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+}
+.giftsContent ul li span a{
+    background-color: #D4AF37;
+    padding: 6px 12px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    max-width: 60px;
+    text-align: center;
+    transition: 0.3s ease-in-out;
+    border: 2px solid var(--zloty);
+}
+.giftsContent ul li span a:hover{
+    background-color: #fff;
+    color: var(--zloty);
+}
+.giftsContent ul li input{
+    cursor: pointer;
+}
+.giftsContent ul li input:checked{
+    cursor: none;
+}
+/* popup sekcja prezenty*/
+#popup{
+    display: none; 
+    position: fixed; 
+    top: 50%; 
+    left: 50%; 
+    height: 100vh;
+    width: 100vw;
+    transform: translate(-50%, -50%); 
+    background: rgba(0, 0, 0, 0.3); 
+    border-radius: 5px; 
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    z-index: 10000;
+    align-items: center;
+    justify-content: center;
+}
+.popupContent{
+    width: 600px;
+    height: 400px;
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+

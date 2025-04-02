@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Satisfy&display=swap');
+/* 
+.libre-baskerville-regular {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.libre-baskerville-bold {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.libre-baskerville-regular-italic {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+.satisfy-regular {
+  font-family: "Satisfy", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+*/
+:root{
+    --fontBody: "Libre Baskerville", serif;
+    --fontSatisfy: "Satisfy", cursive;
+    --colorHomeWhite: #F5F1E6;
+    --colorBackground: #E3C6A4;
+}
+.container-fluid {
+    padding: 0px;
+    font-family: var(--fontBody);
+    background-color:#fff;
+}
+section.home{
+    background: url(../images/examplePageTwo/examplePageTwoHomeTop.jpg) no-repeat center center;
+    background-size: cover;
+    color: var(--colorHomeWhite);
+    text-shadow: 2px 2px 4px #000000;
+}
+section.home .contentHomeSection h1{
+    font-family: var(--fontSatisfy);
+    font-style: italic;
+}
+.contentInvitationSection{
+    min-height: 400px;
+    max-width: 900px;
+    margin-left: 100px;
+}
+.leftImageInvitation img{
+    height: 400px;
+    width: 400px;
+}

@@ -1,0 +1,350 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ExamplePageController!{% endblock %}
+
+{% block body %}
+<!-- prawe menu -->
+ <nav class="menuDesktopRightBar">
+    <ul>
+        <li>
+            <a href="#home">
+                <i class="fa fa-home" aria-hidden="true"></i>
+                <span>Główna</span>
+            </a>
+        </li>
+        <li>
+            <a href="#attractions">
+                <i class="fa fa-list" aria-hidden="true"></i>
+                <span>Atrakcje</span>
+            </a>
+        </li>
+        <li>
+            <a href="#place">
+                <i class="fa fa-map-o" aria-hidden="true"></i>
+                <span>Miejsce</span>
+            </a>  
+        </li>
+        <li>
+            <a href="#presence">
+                <i class="fa fa-check" aria-hidden="true"></i>
+                <span>Obecność</span>
+            </a>
+        </li>
+        <li>
+            <a href="#gifts">
+                <i class="fa fa-gift" aria-hidden="true"></i>
+                <span>Prezenty</span>
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                <span>Kontakt</span>
+            </a>
+        </li>
+    </ul>
+ </nav>
+ <!-- początek strony ze zdjęciem pary młodej-->
+<section class="home" id="home">
+    <div class="contentHome">
+        <img src="./images/homeExamplePage.jpg" alt="">
+        <div class="box"></div>
+        <div class="box">
+            <!-- górne menu -->
+            <header>
+                <div class="headerContent">
+                    <div class="menu">
+                        <a href="#attractions">Atrakcje</a>
+                        <a href="#place">Miejsce</a>
+                        <a href="#presence">Obecność</a>
+                        <a href="#gifts">Prezenty</a>
+                        <a href="">Kontakt</a>
+                    </div>
+                </div>
+            </header>
+            <h1>{{ imiona_pary }}</h1>
+            <!-- czasomierz -->
+             <p>Do ślubu pozostało: </p>
+            <div id="countdown"></div>
+            <a href="#attractions" class="buttonLink">Sprawdź atrakcje</a>
+        </div>
+    </div>
+</section>
+<!-- atrakcje -->
+<section class="attractions" id="attractions">
+    <div class="contentAttractions">
+        <h2>Atrakcje które na Was czekają</h2>
+        <ul>
+            {% for attraction in attractions %}
+            <li>
+                <div class="icons">{{ attraction.icons|raw }}</div>
+                <h4>{{ attraction.header }}</h4>
+                <p>{{ attraction.describe }}</p>
+            </li>
+            {% else %}
+                <li>Brak atrakcji</li>
+            {% endfor %}
+        </ul>
+        <a href="#place" class="buttonLink">Zobacz gdzie</a>
+    </div>
+</section>
+<section class="place" id="place">
+    <!-- miejsce ślubu -->
+    <div class="weddingPlace">
+        <img src="./images/placeWedding.jpg" alt="">
+        <div class="weddingPlaceContent">
+            <div class="box">
+                <h3>Ślub</h3>
+                <ul>
+                    {% for dataOfWedding in datasOfWedding %}
+                    <li>
+                        <h4>{{ dataOfWedding.header }}</h4>
+                        <p>{{ dataOfWedding.content }}</p>
+                    </li>
+                    {% else %}
+                        <li>Brak danych</li>
+                    {% endfor %}
+                </ul>
+                <a href="" class="buttonLink">Zobacz na mapie</a>
+            </div>
+            <div class="box">
+            </div>
+        </div>
+    </div>
+    <!-- miejsce wesela -->
+    <div class="weddingReceptionPlace">
+        <img src="./images/placeWeddingReceptions.jpg" alt="">
+        <div class="weddingReceptionPlaceContent">
+            <div class="box">
+            </div>
+            <div class="box">
+                <h2>Wesele</h2>
+                <ul>
+                    {% for dataOfWeddingReception in datasOfWeddingReception %}
+                    <li>
+                        <h4>{{ dataOfWeddingReception.header }}</h4>
+                        <p>{{ dataOfWeddingReception.content }}</p>
+                    </li>
+                    {% else %}
+                        <li>Brak danych</li>
+                    {% endfor %}
+                </ul>
+                <a href="" class="buttonLink">Zobacz na mapie</a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- potwierdzenia obecności -->
+<section class="presence" id="presence">
+    <div class="presenceContent">
+        <h2>Potwierdź swoją obecność</h2>
+        {{ form_start(form, {'attr': {'class': 'formGuest'}})}}
+        <div class="box">
+            {{ form_label(form.Imie, 'Imie')}}
+            {{ form_widget(form.Imie, {'attr':{'class':'inputName','placeholder':'Imie..'}} )}}
+        </div>
+        <div class="box">
+            {{ form_label(form.Nazwisko, 'Nazwisko')}}
+            {{ form_widget(form.Nazwisko, {'attr':{'class':'inputName','placeholder':'Nazwisko..'}} )}}
+        </div>
+        <div class="box">
+            {{ form_label(form.Email, 'Email (Opcjonalne)')}}
+            {{ form_widget(form.Email, {'attr':{'class':'inputName','placeholder':'Email..'}} )}}
+        </div>
+        <div class="box">
+            {{ form_widget(form.save, {'attr':{'class':'buttonForm'}})}}
+        </div>
+        {{ form_end(form)}}
+    </div>
+</section>
+<!-- sekcja prezentow -->
+<section class="gifts" id="gifts">
+    <img src="./images/backgroundGifts.jpg" alt="">
+    <div class="giftsContent">
+        <h2>Lista prezentów</h2>
+        <ul id="listGift">
+            {% for prezent in prezenty %}
+                <li>
+                    {% if prezent.zarezerwowany != NULL %}
+                        {% if prezent.link != NULL %}
+                            <span style="text-decoration: line-through;">{{ prezent.nazwa }}</span> 
+                            <span><a href='{{ prezent.link }}' target="_blank">Link</a></span> 
+                            <input type="checkbox" class="rezerwuj-checkbox" data-id="{{ prezent.id }}" disabled>
+                        {% else %}
+                            <span style="text-decoration: line-through;">{{ prezent.nazwa }}</span>
+                            <span></span> 
+                            <input type="checkbox" class="rezerwuj-checkbox" data-id="{{ prezent.id }}" disabled>
+                        {% endif %}
+                    {% else %}
+                        {% if prezent.link != NULL %}
+                            <span>{{ prezent.nazwa }}</span> 
+                            <span><a href='{{ prezent.link }}' target="_blank">Link</a></span> 
+                            <input type="checkbox" class="rezerwuj-checkbox" data-id="{{ prezent.id }}">
+                        {% else %}
+                            <span>{{ prezent.nazwa }}</span> 
+                            <span></span> 
+                            <input type="checkbox" class="rezerwuj-checkbox" data-id="{{ prezent.id }}">
+                        {% endif %}
+                    {% endif %}
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</section>
+    <!-- Pop-up do rezerwacji prezentu -->
+    <div id="popup">
+        <div class="popupContent">
+            <h2>Podaj imię i nazwisko</h2>
+            <input type="text" id="imieNazwisko" placeholder="Twoje imię i nazwisko">
+            <button id="potwierdz">Potwierdź</button>
+            <button id="anuluj">Anuluj</button>
+        </div>
+    </div>
+<script>
+    // czasomierze na stronie głównej
+    document.addEventListener("DOMContentLoaded", function () {
+        const targetTimestamp = {{ targetTimestampDate }} * 1000;// zamian na milisekundy
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const timeLeft = targetTimestamp - now;
+            if (timeLeft <= 0) {
+                document.getElementById("countdown").innerHTML = "<h2>To już dziś!!!</h2>";
+                clearInterval(countdownInterval);
+                return;
+            }
+            const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+            document.getElementById("countdown").innerHTML =
+                `<ul><li><span>Dni</span><span>${days}</span></li> 
+                <li><span>Godziny</span><span>${hours}</span></li>
+                <li><span>Minuty</span><span>${minutes}</span></li> 
+                <li><span>Sekundy</span><span>${seconds}</span></li></ul>`;
+        }
+        // Odświeżanie czasu co sekundę
+        const countdownInterval = setInterval(updateCountdown, 1000);
+        updateCountdown();
+    });
+</script>
+{% for message in app.flashes('success') %}
+    <script>
+        // Pop up z informacją o potwierdzeniu obecności
+        window.onload = function() {
+            // Tworzymy pop up
+            let popup = document.createElement("div");
+            popup.textContent = "{{ message }}";
+            popup.style.position = "fixed";
+            popup.style.top = "20px";
+            popup.style.left = "50%";
+            popup.style.transform = "translateX(-50%)";
+            popup.style.background = "#4CAF50";
+            popup.style.color = "white";
+            popup.style.padding = "15px 20px";
+            popup.style.borderRadius = "5px";
+            popup.style.boxShadow = "0 0 10px rgba(0, 0, 0, 0.3)";
+            popup.style.zIndex = "1000";
+            popup.style.fontSize = "16px";
+
+            document.body.appendChild(popup);
+
+            // Pop up znika po 3 sekundach 
+            setTimeout(function() {
+                popup.style.opacity = "0";
+                popup.style.transition = "opacity 0.5s";
+                setTimeout(() => popup.remove(), 500);
+            }, 3000);
+        };
+    </script>
+{% endfor %}
+<script>
+
+    // Pop up do rezerwacji prezentu
+    document.addEventListener("DOMContentLoaded", function() {
+        let popup = document.getElementById("popup");
+        let potwierdzBtn = document.getElementById("potwierdz");
+        let anulujBtn = document.getElementById("anuluj");
+        let inputImie = document.getElementById("imieNazwisko");
+        let wybranyPrezentId = null;
+
+        document.querySelectorAll(".rezerwuj-checkbox").forEach(checkbox => {
+            checkbox.addEventListener("change", function() {
+                if (this.checked) {
+                    wybranyPrezentId = this.getAttribute("data-id");
+                    popup.style.display = "flex";
+                }
+            });
+        });
+
+        anulujBtn.addEventListener("click", function() {
+            popup.style.display = "none";
+            inputImie.value = "";
+            wybranyPrezentId = null;
+        });
+
+        potwierdzBtn.addEventListener("click", function() {
+            let imieNazwisko = inputImie.value.trim();
+            if (!imieNazwisko) {
+                alert("Podaj swoje imię i nazwisko!");
+                return;
+            }
+
+            fetch("{{ path('rezerwuj_prezent') }}", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/x-www-form-urlencoded"
+                },
+                body: "prezent_id=" + wybranyPrezentId + "&rezerwujacy=" + encodeURIComponent(imieNazwisko)
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);  // Dodaj logowanie odpowiedzi
+                if (data.success) {
+                    alert(data.message);
+                    location.reload();
+                } else {
+                    alert(data.message);
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);  // Logowanie błędów
+            });
+            popup.style.display = "none";
+        });
+    });
+</script>
+<script>
+    // animacja ładowania strony
+    $(window).on('load', function() {
+        $('section.home img').css('opacity', '1');
+        $('section.home img').css('transform', 'translateX(0px)');
+        $('.contentHome .box h1').css('opacity', '1');
+        $('.contentHome .box p').css('opacity', '1');
+        $('.contentHome .box #countdown').css('opacity', '1');
+
+    });
+    // animacja bocznego menu
+    $(document).ready(function () {
+    var menu = $('.menuDesktopRightBar');
+    var menuItems = $('.menuDesktopRightBar ul li a');
+    
+    $(window).on('scroll', function () {
+        if ($(this).scrollTop() > 400) {
+            menu.css('right', '30px');
+            menuItems.each(function(index) {
+                $(this).delay(index * 300).animate({ right: "0px" }, 300);
+            });
+        } else {
+            menu.css('right', '-200px');
+            menuItems.stop(true, true).css('right', '-200px');
+        }
+    });
+    
+    menuItems.css({
+        right: '-200px'
+    });
+});
+
+</script>
+{% endblock %}

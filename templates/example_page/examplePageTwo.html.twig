@@ -1,0 +1,90 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Strona przykładowa 2!{% endblock %}
+
+
+{% block stylesheets %}
+<link rel="stylesheet" href="/styles/examplePageTwo.css">
+{% endblock %}
+{% block body %}
+<div class="container-fluid m-0">
+    <section class="home vh-100 p-0 m-0 d-flex justify-content-center align-items-center">
+        <div class="contentHomeSection d-flex flex-column justify-content-center align-items-center text-center">
+            <h1 class="display-1 fw-normal mb-5">{{nameOfCouple}}</h1>
+            <div class="date fs-3 fw-bold mt-n1">{{dateOfWedding}}</div>
+            <div class="timerHomeTop"></div>
+        </div>
+    </section>
+    <section class="invitation w-100 p-0 m-0 d-flex justify-content-center align-items-center p-5 flex-column">
+        <div class="contentInvitationSection w-75 shadow-lg p-5 mb-5 bg-body rounded position-relative row">
+            <div class="leftImageInvitation col-sm-6 col-md-4 col-lg-3 position-relative">
+                <img src="/images/examplePageTwo/examplePageTwoHomeTop.jpg" alt="" class="rounded-circle overflow-hidden mb-4 object-fit-fill position-absolute top-50 start-0 translate-middle">
+            </div>
+            <div class="rightInvitationContent col-sm-6 col-md-4 col-lg-9">
+                <h2 class="h2 mb-4">Zaproszenie</h2>       
+                <p >Z radością zapraszamy
+                    [Imię Panny Młodej] & [Imię Pana Młodego]
+                    na uroczystość zaślubin,
+                    która odbędzie się
+                    {{dateOfWedding}} o godzinie [Godzina]
+                    w [Miejsce ceremonii].
+                    
+                    Po ceremonii serdecznie zapraszamy na przyjęcie weselne,
+                    które odbędzie się w [Miejsce przyjęcia].
+                    
+                    Prosimy o potwierdzenie przybycia do [Data RSVP]
+                    pod numerem telefonu: [Numer telefonu]
+                    
+                    Z miłością i radością,
+                    [Imię Panny Młodej] & [Imię Pana Młodego]
+                </p>    
+            </div>
+        </div>
+        <a href="">Zobacz Gdzie</a>
+    </section>
+    <section class="place w-100 p-5 d-flex justify-content-center align-items-center flex-column">
+        <h2 class="h2">Gdzie i kiedy</h2>
+        <div class="contentPlace row w-100">
+            <div class="boxPlace col-4">
+                <h2 class="h2 mb-4">Miejsce ceremonii</h2>
+                <ul>
+                    {% for dataOfWedding in datasOfWedding %}
+                    <li>
+                        <h4>{{ dataOfWedding.header }}</h4>
+                        <p>{{ dataOfWedding.content }}</p>
+                    </li>
+                    {% else %}
+                        <li>Brak danych</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="boxPlace col-4">
+                <h2 class="h2 mb-4">Miejsce przyjęcia</h2>
+                <ul>
+                    {% for dataOfWeddingReception in datasOfWeddingReception %}
+                    <li>
+                        <h4>{{ dataOfWeddingReception.header }}</h4>
+                        <p>{{ dataOfWeddingReception.content }}</p>
+                    </li>
+                    {% else %}
+                        <li>Brak danych</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="boxPlace col-4">
+                <h2 class="h2 mb-4">Miejsce noclegu</h2>
+                <ul>
+                    {% for dataOfWeddingReception in datasOfWeddingReception %}
+                    <li>
+                        <h4>{{ dataOfWeddingReception.header }}</h4>
+                        <p>{{ dataOfWeddingReception.content }}</p>
+                    </li>
+                    {% else %}
+                        <li>Brak danych</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </section>
+</div>
+{% endblock %}
