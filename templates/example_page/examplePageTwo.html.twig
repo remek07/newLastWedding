@@ -43,14 +43,14 @@
         <a href="">Zobacz Gdzie</a>
     </section>
     <section class="place w-100 p-5 d-flex justify-content-center align-items-center flex-column">
-        <h2 class="h2">Gdzie i kiedy</h2>
-        <div class="contentPlace row w-100">
-            <div class="boxPlace col-4">
-                <h2 class="h2 mb-4">Miejsce ceremonii</h2>
-                <ul>
+        <h2 class="h2 mb-5">Gdzie i kiedy</h2>
+        <div class="contentPlace row w-100 text-center" >
+            <div class="boxPlace col-4 mt-3">
+                <h3>Ślub</h3>
+                <ul class="grid list-unstyled p-4 g-1">
                     {% for dataOfWedding in datasOfWedding %}
-                    <li>
-                        <h4>{{ dataOfWedding.header }}</h4>
+                    <li class="m-1 p-2">
+                        <h5>{{ dataOfWedding.header }}</h5>
                         <p>{{ dataOfWedding.content }}</p>
                     </li>
                     {% else %}
@@ -58,12 +58,12 @@
                     {% endfor %}
                 </ul>
             </div>
-            <div class="boxPlace col-4">
-                <h2 class="h2 mb-4">Miejsce przyjęcia</h2>
-                <ul>
+            <div class="boxPlace col-4 mt-3">
+                <h3>Wesele</h3>
+                <ul class="grid list-unstyled p-4" >
                     {% for dataOfWeddingReception in datasOfWeddingReception %}
-                    <li>
-                        <h4>{{ dataOfWeddingReception.header }}</h4>
+                    <li class="m-1 p-2">
+                        <h5 class="h5">{{ dataOfWeddingReception.header }}</h5>
                         <p>{{ dataOfWeddingReception.content }}</p>
                     </li>
                     {% else %}
@@ -71,12 +71,12 @@
                     {% endfor %}
                 </ul>
             </div>
-            <div class="boxPlace col-4">
-                <h2 class="h2 mb-4">Miejsce noclegu</h2>
-                <ul>
+            <div class="boxPlace col-4 mt-3">
+                <h3>Nocleg</h3>
+                <ul class="grid list-unstyled p-4">
                     {% for dataOfWeddingReception in datasOfWeddingReception %}
-                    <li>
-                        <h4>{{ dataOfWeddingReception.header }}</h4>
+                    <li class="m-1 p-2">
+                        <h5 class="h5">{{ dataOfWeddingReception.header }}</h5>
                         <p>{{ dataOfWeddingReception.content }}</p>
                     </li>
                     {% else %}

@@ -53,3 +53,12 @@ section.home .contentHomeSection h1{
     height: 400px;
     width: 400px;
 }
+section.place .boxPlace ul{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+section.place .boxPlace ul li{
+  background-color: red;
+  border-radius: 12px;
+}

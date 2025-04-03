@@ -13,15 +13,15 @@ final class ExamplePageTwoController extends AbstractController
     {
         $datasOfWedding =[
             [
-                'header'=>'Data Ślubu:',
+                'header'=>'Data:',
                 'content'=>'10.04.2025',
             ],
             [
-                'header'=>'Godzina Ceremoni:',
+                'header'=>'Godzina:',
                 'content'=>'11:00',
             ],
             [
-                'header'=>'Miejsce Ślubu:',
+                'header'=>'Miejsce:',
                 'content'=>'Kościół św. Jana w Warszawie',
             ],
             [
@@ -31,15 +31,15 @@ final class ExamplePageTwoController extends AbstractController
         ];
         $datasOfWeddingReception =[
             [
-                'header'=>'Data Wesela:',
+                'header'=>'Data:',
                 'content'=>'10.04.2025',
             ],
             [
-                'header'=>'Godzina Wesela:',
+                'header'=>'Godzina:',
                 'content'=>'13:00',
             ],
             [
-                'header'=>'Miejsce Wesela:',
+                'header'=>'Miejsce:',
                 'content'=>'Sala Bankietowa "Czarna Perła"',
             ],
             [
@@ -49,15 +49,15 @@ final class ExamplePageTwoController extends AbstractController
         ];
         $datasOfWeddingReception =[
             [
-                'header'=>'Data Wesela:',
+                'header'=>'Data:',
                 'content'=>'10.04.2025',
             ],
             [
-                'header'=>'Godzina Wesela:',
+                'header'=>'Godzina:',
                 'content'=>'13:00',
             ],
             [
-                'header'=>'Miejsce Wesela:',
+                'header'=>'Miejsce:',
                 'content'=>'Sala Bankietowa "Czarna Perła"',
             ],
             [
