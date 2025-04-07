@@ -102,16 +102,22 @@ class __TwigTemplate_426d6c1add30b2e36ec03cfe127d7103 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 10
-        yield "<div class=\"container-fluid m-0\">
+        yield "<!--
+    Miejca
+    Atrakcje
+    Prezenty
+    Potweirdzenie przybycia
+-->
+<div class=\"container-fluid m-0\">
     <section class=\"home vh-100 p-0 m-0 d-flex justify-content-center align-items-center\">
         <div class=\"contentHomeSection d-flex flex-column justify-content-center align-items-center text-center\">
             <h1 class=\"display-1 fw-normal mb-5\">";
-        // line 13
-        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape((isset($context["nameOfCouple"]) || array_key_exists("nameOfCouple", $context) ? $context["nameOfCouple"] : (function () { throw new RuntimeError('Variable "nameOfCouple" does not exist.', 13, $this->source); })()), "html", null, true);
+        // line 19
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape((isset($context["nameOfCouple"]) || array_key_exists("nameOfCouple", $context) ? $context["nameOfCouple"] : (function () { throw new RuntimeError('Variable "nameOfCouple" does not exist.', 19, $this->source); })()), "html", null, true);
         yield "</h1>
             <div class=\"date fs-3 fw-bold mt-n1\">";
-        // line 14
-        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape((isset($context["dateOfWedding"]) || array_key_exists("dateOfWedding", $context) ? $context["dateOfWedding"] : (function () { throw new RuntimeError('Variable "dateOfWedding" does not exist.', 14, $this->source); })()), "html", null, true);
+        // line 20
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape((isset($context["dateOfWedding"]) || array_key_exists("dateOfWedding", $context) ? $context["dateOfWedding"] : (function () { throw new RuntimeError('Variable "dateOfWedding" does not exist.', 20, $this->source); })()), "html", null, true);
         yield "</div>
             <div class=\"timerHomeTop\"></div>
         </div>
@@ -128,8 +134,8 @@ class __TwigTemplate_426d6c1add30b2e36ec03cfe127d7103 extends Template
                     na uroczystość zaślubin,
                     która odbędzie się
                     ";
-        // line 29
-        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape((isset($context["dateOfWedding"]) || array_key_exists("dateOfWedding", $context) ? $context["dateOfWedding"] : (function () { throw new RuntimeError('Variable "dateOfWedding" does not exist.', 29, $this->source); })()), "html", null, true);
+        // line 35
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape((isset($context["dateOfWedding"]) || array_key_exists("dateOfWedding", $context) ? $context["dateOfWedding"] : (function () { throw new RuntimeError('Variable "dateOfWedding" does not exist.', 35, $this->source); })()), "html", null, true);
         yield " o godzinie [Godzina]
                     w [Miejsce ceremonii].
                     
@@ -144,119 +150,202 @@ class __TwigTemplate_426d6c1add30b2e36ec03cfe127d7103 extends Template
                 </p>    
             </div>
         </div>
-        <a href=\"\">Zobacz Gdzie</a>
+        <button type=\"button\" class=\"btn btn-primary\" data-bs-toggle=\"modal\" data-bs-target=\"#exampleModalConfirm\" data-bs-whatever=\"@getbootstrap\">Potwierdź obecność</button>
     </section>
     <section class=\"place w-100 p-5 d-flex justify-content-center align-items-center flex-column\">
         <h2 class=\"h2 mb-5\">Gdzie i kiedy</h2>
         <div class=\"contentPlace row w-100 text-center\" >
-            <div class=\"boxPlace col-4 mt-3\">
+            <div class=\"boxPlace col-6 mt-3 position-relative\">
                 <h3>Ślub</h3>
                 <ul class=\"grid list-unstyled p-4 g-1\">
                     ";
-        // line 51
+        // line 57
         $context['_parent'] = $context;
-        $context['_seq'] = CoreExtension::ensureTraversable((isset($context["datasOfWedding"]) || array_key_exists("datasOfWedding", $context) ? $context["datasOfWedding"] : (function () { throw new RuntimeError('Variable "datasOfWedding" does not exist.', 51, $this->source); })()));
+        $context['_seq'] = CoreExtension::ensureTraversable((isset($context["datasOfWedding"]) || array_key_exists("datasOfWedding", $context) ? $context["datasOfWedding"] : (function () { throw new RuntimeError('Variable "datasOfWedding" does not exist.', 57, $this->source); })()));
         $context['_iterated'] = false;
         foreach ($context['_seq'] as $context["_key"] => $context["dataOfWedding"]) {
-            // line 52
+            // line 58
             yield "                    <li class=\"m-1 p-2\">
                         <h5>";
-            // line 53
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["dataOfWedding"], "header", [], "any", false, false, false, 53), "html", null, true);
+            // line 59
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["dataOfWedding"], "header", [], "any", false, false, false, 59), "html", null, true);
             yield "</h5>
                         <p>";
-            // line 54
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["dataOfWedding"], "content", [], "any", false, false, false, 54), "html", null, true);
+            // line 60
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["dataOfWedding"], "content", [], "any", false, false, false, 60), "html", null, true);
             yield "</p>
                     </li>
                     ";
             $context['_iterated'] = true;
         }
-        // line 56
+        // line 62
         if (!$context['_iterated']) {
-            // line 57
+            // line 63
             yield "                        <li>Brak danych</li>
                     ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_key'], $context['dataOfWedding'], $context['_parent'], $context['_iterated']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 59
+        // line 65
         yield "                </ul>
+                <div class=\"bottomImgBoxContentPlace mw-25 position-relative\">
+                    <img src=\"/images/examplePageTwo/examplePageTwoHomeTop.jpg\" alt=\"\" class=\"mw-100\">
+                    <iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6952.663600538601!2d18.546370629973982!3d50.09254172869486!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47114f28e4e95de7%3A0x57dff1961fa217f6!2sRybnik%20Plaza!5e1!3m2!1spl!2spl!4v1744008210592!5m2!1spl!2spl\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\" class=\"w-75 position-absolute top-100 start-50 translate-middle mt-5 mh-25 shadow-lg\"></iframe>
+                </div>
             </div>
-            <div class=\"boxPlace col-4 mt-3\">
+            <div class=\"boxPlace col-6 mt-3\">
                 <h3>Wesele</h3>
                 <ul class=\"grid list-unstyled p-4\" >
                     ";
-        // line 64
+        // line 74
         $context['_parent'] = $context;
-        $context['_seq'] = CoreExtension::ensureTraversable((isset($context["datasOfWeddingReception"]) || array_key_exists("datasOfWeddingReception", $context) ? $context["datasOfWeddingReception"] : (function () { throw new RuntimeError('Variable "datasOfWeddingReception" does not exist.', 64, $this->source); })()));
+        $context['_seq'] = CoreExtension::ensureTraversable((isset($context["datasOfWeddingReception"]) || array_key_exists("datasOfWeddingReception", $context) ? $context["datasOfWeddingReception"] : (function () { throw new RuntimeError('Variable "datasOfWeddingReception" does not exist.', 74, $this->source); })()));
         $context['_iterated'] = false;
         foreach ($context['_seq'] as $context["_key"] => $context["dataOfWeddingReception"]) {
-            // line 65
+            // line 75
             yield "                    <li class=\"m-1 p-2\">
                         <h5 class=\"h5\">";
-            // line 66
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["dataOfWeddingReception"], "header", [], "any", false, false, false, 66), "html", null, true);
+            // line 76
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["dataOfWeddingReception"], "header", [], "any", false, false, false, 76), "html", null, true);
             yield "</h5>
                         <p>";
-            // line 67
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["dataOfWeddingReception"], "content", [], "any", false, false, false, 67), "html", null, true);
+            // line 77
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["dataOfWeddingReception"], "content", [], "any", false, false, false, 77), "html", null, true);
             yield "</p>
                     </li>
                     ";
             $context['_iterated'] = true;
         }
-        // line 69
+        // line 79
         if (!$context['_iterated']) {
-            // line 70
-            yield "                        <li>Brak danych</li>
-                    ";
-        }
-        $_parent = $context['_parent'];
-        unset($context['_seq'], $context['_key'], $context['dataOfWeddingReception'], $context['_parent'], $context['_iterated']);
-        $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 72
-        yield "                </ul>
-            </div>
-            <div class=\"boxPlace col-4 mt-3\">
-                <h3>Nocleg</h3>
-                <ul class=\"grid list-unstyled p-4\">
-                    ";
-        // line 77
-        $context['_parent'] = $context;
-        $context['_seq'] = CoreExtension::ensureTraversable((isset($context["datasOfWeddingReception"]) || array_key_exists("datasOfWeddingReception", $context) ? $context["datasOfWeddingReception"] : (function () { throw new RuntimeError('Variable "datasOfWeddingReception" does not exist.', 77, $this->source); })()));
-        $context['_iterated'] = false;
-        foreach ($context['_seq'] as $context["_key"] => $context["dataOfWeddingReception"]) {
-            // line 78
-            yield "                    <li class=\"m-1 p-2\">
-                        <h5 class=\"h5\">";
-            // line 79
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["dataOfWeddingReception"], "header", [], "any", false, false, false, 79), "html", null, true);
-            yield "</h5>
-                        <p>";
             // line 80
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["dataOfWeddingReception"], "content", [], "any", false, false, false, 80), "html", null, true);
-            yield "</p>
-                    </li>
-                    ";
-            $context['_iterated'] = true;
-        }
-        // line 82
-        if (!$context['_iterated']) {
-            // line 83
             yield "                        <li>Brak danych</li>
                     ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_key'], $context['dataOfWeddingReception'], $context['_parent'], $context['_iterated']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 85
+        // line 82
+        yield "                </ul>
+                <div class=\"bottomImgBoxContentPlace mw-25 position-relative\">
+                    <img src=\"/images/examplePageTwo/examplePageTwoHomeTop.jpg\" alt=\"\" class=\"mw-100\">
+                    <iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6952.663600538601!2d18.546370629973982!3d50.09254172869486!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47114f28e4e95de7%3A0x57dff1961fa217f6!2sRybnik%20Plaza!5e1!3m2!1spl!2spl!4v1744008210592!5m2!1spl!2spl\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\" class=\"w-75 position-absolute top-100 start-50 translate-middle mt-5 mh-25 shadow-lg\"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class=\"attractions w-100 p-5 d-flex justify-content-center align-items-center flex-column\" style=\"margin-top: 200px;\">
+        <div class=\"w-75 text-center\" >
+            <h2 class=\"h2 mb-5\">Atrakcje</h2>
+            <div class=\"boxAttractions mt-3 position-relative\">
+                <ul class=\"list-unstyled row justify-content-md-center w-100\">
+                    ";
+        // line 95
+        $context['_parent'] = $context;
+        $context['_seq'] = CoreExtension::ensureTraversable((isset($context["attractions"]) || array_key_exists("attractions", $context) ? $context["attractions"] : (function () { throw new RuntimeError('Variable "attractions" does not exist.', 95, $this->source); })()));
+        $context['_iterated'] = false;
+        foreach ($context['_seq'] as $context["_key"] => $context["attraction"]) {
+            // line 96
+            yield "                    <li class=\"col d-flex flex-column justify-content-center align-items-center m-1 p-2\">
+                        <div class=\"\">";
+            // line 97
+            yield CoreExtension::getAttribute($this->env, $this->source, $context["attraction"], "icons", [], "any", false, false, false, 97);
+            yield "</div>
+                        <h4>";
+            // line 98
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["attraction"], "header", [], "any", false, false, false, 98), "html", null, true);
+            yield "</h4>
+                        <p>";
+            // line 99
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["attraction"], "describe", [], "any", false, false, false, 99), "html", null, true);
+            yield "</p>
+                    </li>
+                    ";
+            $context['_iterated'] = true;
+        }
+        // line 101
+        if (!$context['_iterated']) {
+            // line 102
+            yield "                        <li>Brak atrakcji</li>
+                    ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_key'], $context['attraction'], $context['_parent'], $context['_iterated']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 104
         yield "                </ul>
             </div>
         </div>
     </section>
+    <section class=\"gifts\">
+        <button type=\"checkbox\" class=\"btn btn-primary\" data-bs-toggle=\"modal\" data-bs-target=\"#exampleModalGifts\" data-bs-whatever=\"@getbootstrap\"></button>
+    </section>
 </div>
+
+<div class=\"modal fade\" id=\"exampleModalConfirm\" tabindex=\"-1\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">
+    <div class=\"modal-dialog\">
+      <div class=\"modal-content\">
+        <div class=\"modal-header\">
+          <h5 class=\"modal-title\" id=\"exampleModalLabel\">Potwiedź obecność</h5>
+          <button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"modal\" aria-label=\"Close\"></button>
+        </div>
+        <div class=\"modal-body\">
+          <form>
+            <div class=\"mb-2 row p-0 m-0\">
+                <div class=\"col p-0 m-1\">
+                    <label for=\"recipient-name\" class=\"col-form-label\">Imię:</label>
+                    <input type=\"text\" class=\"form-control\" id=\"recipient-name\">
+                </div>
+                <div class=\"col p-0 m-1\">
+                    <label for=\"recipient-name\" class=\"col-form-label\">Nazwisko:</label>
+                    <input type=\"text\" class=\"form-control\" id=\"recipient-name\">
+                </div>
+            </div>
+            <div class=\"mb-2 p-1\">
+                <label for=\"recipient-name\" class=\"col-form-label\">E-mail:</label>
+                <input type=\"text\" class=\"form-control\" id=\"recipient-name\">
+            </div>
+          </form>
+        </div>
+        <div class=\"modal-footer\">
+          <button type=\"button\" class=\"btn btn-secondary\" data-bs-dismiss=\"modal\">Wyjdź</button>
+          <button type=\"button\" class=\"btn btn-primary\">Potwierdź</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  
+<div class=\"modal fade\" id=\"exampleModalGifts\" tabindex=\"-1\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">
+    <div class=\"modal-dialog\">
+      <div class=\"modal-content\">
+        <div class=\"modal-header\">
+          <h5 class=\"modal-title\" id=\"exampleModalLabel\">Potwiedź zakup prezentu</h5>
+          <button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"modal\" aria-label=\"Close\"></button>
+        </div>
+        <div class=\"modal-body\">
+          <form>
+            <div class=\"mb-2 row p-0 m-0\">
+                <div class=\"col p-0 m-1\">
+                    <label for=\"recipient-name\" class=\"col-form-label\">Imię:</label>
+                    <input type=\"text\" class=\"form-control\" id=\"recipient-name\">
+                </div>
+                <div class=\"col p-0 m-1\">
+                    <label for=\"recipient-name\" class=\"col-form-label\">Nazwisko:</label>
+                    <input type=\"text\" class=\"form-control\" id=\"recipient-name\">
+                </div>
+            </div>
+          </form>
+        </div>
+        <div class=\"modal-footer\">
+          <button type=\"button\" class=\"btn btn-secondary\" data-bs-dismiss=\"modal\">Wyjdź</button>
+          <button type=\"button\" class=\"btn btn-primary\">Kupię</button>
+        </div>
+      </div>
+    </div>
+  </div>
 ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -285,7 +374,7 @@ class __TwigTemplate_426d6c1add30b2e36ec03cfe127d7103 extends Template
      */
     public function getDebugInfo(): array
     {
-        return array (  255 => 85,  248 => 83,  246 => 82,  239 => 80,  235 => 79,  232 => 78,  227 => 77,  220 => 72,  213 => 70,  211 => 69,  204 => 67,  200 => 66,  197 => 65,  192 => 64,  185 => 59,  178 => 57,  176 => 56,  169 => 54,  165 => 53,  162 => 52,  157 => 51,  132 => 29,  114 => 14,  110 => 13,  105 => 10,  95 => 9,  86 => 7,  76 => 6,  59 => 3,  42 => 1,);
+        return array (  277 => 104,  270 => 102,  268 => 101,  261 => 99,  257 => 98,  253 => 97,  250 => 96,  245 => 95,  230 => 82,  223 => 80,  221 => 79,  214 => 77,  210 => 76,  207 => 75,  202 => 74,  191 => 65,  184 => 63,  182 => 62,  175 => 60,  171 => 59,  168 => 58,  163 => 57,  138 => 35,  120 => 20,  116 => 19,  105 => 10,  95 => 9,  86 => 7,  76 => 6,  59 => 3,  42 => 1,);
     }
 
     public function getSourceContext(): Source
@@ -299,6 +388,12 @@ class __TwigTemplate_426d6c1add30b2e36ec03cfe127d7103 extends Template
 <link rel=\"stylesheet\" href=\"/styles/examplePageTwo.css\">
 {% endblock %}
 {% block body %}
+<!--
+    Miejca
+    Atrakcje
+    Prezenty
+    Potweirdzenie przybycia
+-->
 <div class=\"container-fluid m-0\">
     <section class=\"home vh-100 p-0 m-0 d-flex justify-content-center align-items-center\">
         <div class=\"contentHomeSection d-flex flex-column justify-content-center align-items-center text-center\">
@@ -332,12 +427,12 @@ class __TwigTemplate_426d6c1add30b2e36ec03cfe127d7103 extends Template
                 </p>    
             </div>
         </div>
-        <a href=\"\">Zobacz Gdzie</a>
+        <button type=\"button\" class=\"btn btn-primary\" data-bs-toggle=\"modal\" data-bs-target=\"#exampleModalConfirm\" data-bs-whatever=\"@getbootstrap\">Potwierdź obecność</button>
     </section>
     <section class=\"place w-100 p-5 d-flex justify-content-center align-items-center flex-column\">
         <h2 class=\"h2 mb-5\">Gdzie i kiedy</h2>
         <div class=\"contentPlace row w-100 text-center\" >
-            <div class=\"boxPlace col-4 mt-3\">
+            <div class=\"boxPlace col-6 mt-3 position-relative\">
                 <h3>Ślub</h3>
                 <ul class=\"grid list-unstyled p-4 g-1\">
                     {% for dataOfWedding in datasOfWedding %}
@@ -349,8 +444,12 @@ class __TwigTemplate_426d6c1add30b2e36ec03cfe127d7103 extends Template
                         <li>Brak danych</li>
                     {% endfor %}
                 </ul>
+                <div class=\"bottomImgBoxContentPlace mw-25 position-relative\">
+                    <img src=\"/images/examplePageTwo/examplePageTwoHomeTop.jpg\" alt=\"\" class=\"mw-100\">
+                    <iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6952.663600538601!2d18.546370629973982!3d50.09254172869486!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47114f28e4e95de7%3A0x57dff1961fa217f6!2sRybnik%20Plaza!5e1!3m2!1spl!2spl!4v1744008210592!5m2!1spl!2spl\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\" class=\"w-75 position-absolute top-100 start-50 translate-middle mt-5 mh-25 shadow-lg\"></iframe>
+                </div>
             </div>
-            <div class=\"boxPlace col-4 mt-3\">
+            <div class=\"boxPlace col-6 mt-3\">
                 <h3>Wesele</h3>
                 <ul class=\"grid list-unstyled p-4\" >
                     {% for dataOfWeddingReception in datasOfWeddingReception %}
@@ -362,23 +461,99 @@ class __TwigTemplate_426d6c1add30b2e36ec03cfe127d7103 extends Template
                         <li>Brak danych</li>
                     {% endfor %}
                 </ul>
+                <div class=\"bottomImgBoxContentPlace mw-25 position-relative\">
+                    <img src=\"/images/examplePageTwo/examplePageTwoHomeTop.jpg\" alt=\"\" class=\"mw-100\">
+                    <iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6952.663600538601!2d18.546370629973982!3d50.09254172869486!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47114f28e4e95de7%3A0x57dff1961fa217f6!2sRybnik%20Plaza!5e1!3m2!1spl!2spl!4v1744008210592!5m2!1spl!2spl\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\" class=\"w-75 position-absolute top-100 start-50 translate-middle mt-5 mh-25 shadow-lg\"></iframe>
+                </div>
             </div>
-            <div class=\"boxPlace col-4 mt-3\">
-                <h3>Nocleg</h3>
-                <ul class=\"grid list-unstyled p-4\">
-                    {% for dataOfWeddingReception in datasOfWeddingReception %}
-                    <li class=\"m-1 p-2\">
-                        <h5 class=\"h5\">{{ dataOfWeddingReception.header }}</h5>
-                        <p>{{ dataOfWeddingReception.content }}</p>
+        </div>
+    </section>
+    <section class=\"attractions w-100 p-5 d-flex justify-content-center align-items-center flex-column\" style=\"margin-top: 200px;\">
+        <div class=\"w-75 text-center\" >
+            <h2 class=\"h2 mb-5\">Atrakcje</h2>
+            <div class=\"boxAttractions mt-3 position-relative\">
+                <ul class=\"list-unstyled row justify-content-md-center w-100\">
+                    {% for attraction in attractions %}
+                    <li class=\"col d-flex flex-column justify-content-center align-items-center m-1 p-2\">
+                        <div class=\"\">{{ attraction.icons|raw }}</div>
+                        <h4>{{ attraction.header }}</h4>
+                        <p>{{ attraction.describe }}</p>
                     </li>
                     {% else %}
-                        <li>Brak danych</li>
+                        <li>Brak atrakcji</li>
                     {% endfor %}
                 </ul>
             </div>
         </div>
     </section>
+    <section class=\"gifts\">
+        <button type=\"checkbox\" class=\"btn btn-primary\" data-bs-toggle=\"modal\" data-bs-target=\"#exampleModalGifts\" data-bs-whatever=\"@getbootstrap\"></button>
+    </section>
 </div>
+
+<div class=\"modal fade\" id=\"exampleModalConfirm\" tabindex=\"-1\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">
+    <div class=\"modal-dialog\">
+      <div class=\"modal-content\">
+        <div class=\"modal-header\">
+          <h5 class=\"modal-title\" id=\"exampleModalLabel\">Potwiedź obecność</h5>
+          <button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"modal\" aria-label=\"Close\"></button>
+        </div>
+        <div class=\"modal-body\">
+          <form>
+            <div class=\"mb-2 row p-0 m-0\">
+                <div class=\"col p-0 m-1\">
+                    <label for=\"recipient-name\" class=\"col-form-label\">Imię:</label>
+                    <input type=\"text\" class=\"form-control\" id=\"recipient-name\">
+                </div>
+                <div class=\"col p-0 m-1\">
+                    <label for=\"recipient-name\" class=\"col-form-label\">Nazwisko:</label>
+                    <input type=\"text\" class=\"form-control\" id=\"recipient-name\">
+                </div>
+            </div>
+            <div class=\"mb-2 p-1\">
+                <label for=\"recipient-name\" class=\"col-form-label\">E-mail:</label>
+                <input type=\"text\" class=\"form-control\" id=\"recipient-name\">
+            </div>
+          </form>
+        </div>
+        <div class=\"modal-footer\">
+          <button type=\"button\" class=\"btn btn-secondary\" data-bs-dismiss=\"modal\">Wyjdź</button>
+          <button type=\"button\" class=\"btn btn-primary\">Potwierdź</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  
+<div class=\"modal fade\" id=\"exampleModalGifts\" tabindex=\"-1\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">
+    <div class=\"modal-dialog\">
+      <div class=\"modal-content\">
+        <div class=\"modal-header\">
+          <h5 class=\"modal-title\" id=\"exampleModalLabel\">Potwiedź zakup prezentu</h5>
+          <button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"modal\" aria-label=\"Close\"></button>
+        </div>
+        <div class=\"modal-body\">
+          <form>
+            <div class=\"mb-2 row p-0 m-0\">
+                <div class=\"col p-0 m-1\">
+                    <label for=\"recipient-name\" class=\"col-form-label\">Imię:</label>
+                    <input type=\"text\" class=\"form-control\" id=\"recipient-name\">
+                </div>
+                <div class=\"col p-0 m-1\">
+                    <label for=\"recipient-name\" class=\"col-form-label\">Nazwisko:</label>
+                    <input type=\"text\" class=\"form-control\" id=\"recipient-name\">
+                </div>
+            </div>
+          </form>
+        </div>
+        <div class=\"modal-footer\">
+          <button type=\"button\" class=\"btn btn-secondary\" data-bs-dismiss=\"modal\">Wyjdź</button>
+          <button type=\"button\" class=\"btn btn-primary\">Kupię</button>
+        </div>
+      </div>
+    </div>
+  </div>
 {% endblock %}", "example_page/examplePageTwo.html.twig", "C:\\Users\\admin\\Desktop\\weddingApp\\templates\\example_page\\examplePageTwo.html.twig");
     }
 }

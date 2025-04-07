@@ -7,6 +7,12 @@
 <link rel="stylesheet" href="/styles/examplePageTwo.css">
 {% endblock %}
 {% block body %}
+<!--
+    Miejca
+    Atrakcje
+    Prezenty
+    Potweirdzenie przybycia
+-->
 <div class="container-fluid m-0">
     <section class="home vh-100 p-0 m-0 d-flex justify-content-center align-items-center">
         <div class="contentHomeSection d-flex flex-column justify-content-center align-items-center text-center">
@@ -40,12 +46,12 @@
                 </p>    
             </div>
         </div>
-        <a href="">Zobacz Gdzie</a>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalConfirm" data-bs-whatever="@getbootstrap">Potwierdź obecność</button>
     </section>
     <section class="place w-100 p-5 d-flex justify-content-center align-items-center flex-column">
         <h2 class="h2 mb-5">Gdzie i kiedy</h2>
         <div class="contentPlace row w-100 text-center" >
-            <div class="boxPlace col-4 mt-3">
+            <div class="boxPlace col-6 mt-3 position-relative">
                 <h3>Ślub</h3>
                 <ul class="grid list-unstyled p-4 g-1">
                     {% for dataOfWedding in datasOfWedding %}
@@ -57,8 +63,12 @@
                         <li>Brak danych</li>
                     {% endfor %}
                 </ul>
+                <div class="bottomImgBoxContentPlace mw-25 position-relative">
+                    <img src="/images/examplePageTwo/examplePageTwoHomeTop.jpg" alt="" class="mw-100">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6952.663600538601!2d18.546370629973982!3d50.09254172869486!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47114f28e4e95de7%3A0x57dff1961fa217f6!2sRybnik%20Plaza!5e1!3m2!1spl!2spl!4v1744008210592!5m2!1spl!2spl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="w-75 position-absolute top-100 start-50 translate-middle mt-5 mh-25 shadow-lg"></iframe>
+                </div>
             </div>
-            <div class="boxPlace col-4 mt-3">
+            <div class="boxPlace col-6 mt-3">
                 <h3>Wesele</h3>
                 <ul class="grid list-unstyled p-4" >
                     {% for dataOfWeddingReception in datasOfWeddingReception %}
@@ -70,21 +80,124 @@
                         <li>Brak danych</li>
                     {% endfor %}
                 </ul>
+                <div class="bottomImgBoxContentPlace mw-25 position-relative">
+                    <img src="/images/examplePageTwo/examplePageTwoHomeTop.jpg" alt="" class="mw-100">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6952.663600538601!2d18.546370629973982!3d50.09254172869486!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47114f28e4e95de7%3A0x57dff1961fa217f6!2sRybnik%20Plaza!5e1!3m2!1spl!2spl!4v1744008210592!5m2!1spl!2spl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="w-75 position-absolute top-100 start-50 translate-middle mt-5 mh-25 shadow-lg"></iframe>
+                </div>
             </div>
-            <div class="boxPlace col-4 mt-3">
-                <h3>Nocleg</h3>
-                <ul class="grid list-unstyled p-4">
-                    {% for dataOfWeddingReception in datasOfWeddingReception %}
-                    <li class="m-1 p-2">
-                        <h5 class="h5">{{ dataOfWeddingReception.header }}</h5>
-                        <p>{{ dataOfWeddingReception.content }}</p>
+        </div>
+    </section>
+    <section class="attractions w-100 p-5 d-flex justify-content-center align-items-center flex-column" style="margin-top: 200px;">
+        <div class="w-75 text-center" >
+            <h2 class="h2 mb-5">Atrakcje</h2>
+            <div class="boxAttractions mt-3 position-relative">
+                <ul class="list-unstyled row justify-content-md-center w-100">
+                    {% for attraction in attractions %}
+                    <li class="col d-flex flex-column justify-content-center align-items-center m-1 p-2">
+                        <div class="">{{ attraction.icons|raw }}</div>
+                        <h4>{{ attraction.header }}</h4>
+                        <p>{{ attraction.describe }}</p>
                     </li>
                     {% else %}
-                        <li>Brak danych</li>
+                        <li>Brak atrakcji</li>
                     {% endfor %}
                 </ul>
             </div>
         </div>
     </section>
+    <section class="gifts">
+        <ul id="listGift">
+            {% for prezent in prezenty %}
+                <li>
+                    {% if prezent.zarezerwowany != NULL %}
+                        {% if prezent.link != NULL %}
+                            <span style="text-decoration: line-through;">{{ prezent.nazwa }}</span> 
+                            <span><a href='{{ prezent.link }}' target="_blank">Link</a></span> 
+                            <input type="checkbox" class="rezerwuj-checkbox" data-id="{{ prezent.id }}" disabled>
+                        {% else %}
+                            <span style="text-decoration: line-through;">{{ prezent.nazwa }}</span>
+                            <span></span> 
+                            <input type="checkbox" class="rezerwuj-checkbox" data-id="{{ prezent.id }}" disabled>
+                        {% endif %}
+                    {% else %}
+                        {% if prezent.link != NULL %}
+                            <span>{{ prezent.nazwa }}</span> 
+                            <span><a href='{{ prezent.link }}' target="_blank">Link</a></span> 
+                            <input type="checkbox" class="rezerwuj-checkbox" data-id="{{ prezent.id }}">
+                        {% else %}
+                            <span>{{ prezent.nazwa }}</span> 
+                            <span></span> 
+                            <input type="checkbox" class="rezerwuj-checkbox" data-id="{{ prezent.id }}">
+                        {% endif %}
+                    {% endif %}
+                </li>
+            {% endfor %}
+        </ul>
+        <button type="checkbox" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalGifts" data-bs-whatever="@getbootstrap"></button>
+    </section>
 </div>
+
+<div class="modal fade" id="exampleModalConfirm" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Potwiedź obecność</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-2 row p-0 m-0">
+                <div class="col p-0 m-1">
+                    <label for="recipient-name" class="col-form-label">Imię:</label>
+                    <input type="text" class="form-control" id="recipient-name">
+                </div>
+                <div class="col p-0 m-1">
+                    <label for="recipient-name" class="col-form-label">Nazwisko:</label>
+                    <input type="text" class="form-control" id="recipient-name">
+                </div>
+            </div>
+            <div class="mb-2 p-1">
+                <label for="recipient-name" class="col-form-label">E-mail:</label>
+                <input type="text" class="form-control" id="recipient-name">
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Wyjdź</button>
+          <button type="button" class="btn btn-primary">Potwierdź</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  
+<div class="modal fade" id="exampleModalGifts" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Potwiedź zakup prezentu</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-2 row p-0 m-0">
+                <div class="col p-0 m-1">
+                    <label for="recipient-name" class="col-form-label">Imię:</label>
+                    <input type="text" class="form-control" id="recipient-name">
+                </div>
+                <div class="col p-0 m-1">
+                    <label for="recipient-name" class="col-form-label">Nazwisko:</label>
+                    <input type="text" class="form-control" id="recipient-name">
+                </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Wyjdź</button>
+          <button type="button" class="btn btn-primary">Kupię</button>
+        </div>
+      </div>
+    </div>
+  </div>
 {% endblock %}

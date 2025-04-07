@@ -10,7 +10,7 @@ return [
     [ // $staticRoutes
         '/examplePage' => [[['_route' => 'app_example_page', '_controller' => 'App\\Controller\\ExamplePageController::index'], null, null, null, false, false, null]],
         '/rezerwujPrezent' => [[['_route' => 'rezerwuj_prezent', '_controller' => 'App\\Controller\\ExamplePageController::rezerwujPrezent'], null, ['POST' => 0], null, false, false, null]],
-        '/example/page/two' => [[['_route' => 'app_example_page_two', '_controller' => 'App\\Controller\\ExamplePageTwoController::index'], null, null, null, false, false, null]],
+        '/examplePageTwo' => [[['_route' => 'app_example_page_two', '_controller' => 'App\\Controller\\ExamplePageTwoController::index'], null, null, null, false, false, null]],
         '/' => [[['_route' => 'app_home', '_controller' => 'App\\Controller\\HomeController::index'], null, null, null, false, false, null]],
     ],
     [ // $regexpList

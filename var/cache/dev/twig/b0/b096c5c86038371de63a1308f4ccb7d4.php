@@ -59,26 +59,25 @@ class __TwigTemplate_afde22a5cfd31ab90e16e2b0e2161cc1 extends Template
         <link rel=\"stylesheet\" href=\"/styles/nav.css\">
         <link rel=\"stylesheet\" href=\"/styles/home.css\">
         <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css\" integrity=\"sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==\" crossorigin=\"anonymous\" referrerpolicy=\"no-referrer\" />
-        <link rel=\"stylesheet\" href=\"/styles/examplePage.css\">
         <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css\" rel=\"stylesheet\">
         <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js\"></script>
         <script src=\"https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js\" integrity=\"sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==\" crossorigin=\"anonymous\" referrerpolicy=\"no-referrer\"></script>
 
     ";
-        // line 16
+        // line 15
         yield from $this->unwrap()->yieldBlock('stylesheets', $context, $blocks);
-        // line 18
+        // line 17
         yield "
         ";
-        // line 19
+        // line 18
         yield from $this->unwrap()->yieldBlock('javascripts', $context, $blocks);
-        // line 21
+        // line 20
         yield "    </head>
     <body>
         ";
-        // line 23
+        // line 22
         yield from $this->unwrap()->yieldBlock('body', $context, $blocks);
-        // line 25
+        // line 24
         yield "    </body>
 </html>
 ";
@@ -105,7 +104,7 @@ class __TwigTemplate_afde22a5cfd31ab90e16e2b0e2161cc1 extends Template
         yield from [];
     }
 
-    // line 16
+    // line 15
     /**
      * @return iterable<null|scalar|\Stringable>
      */
@@ -115,7 +114,7 @@ class __TwigTemplate_afde22a5cfd31ab90e16e2b0e2161cc1 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "stylesheets"));
 
-        // line 17
+        // line 16
         yield "        ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -123,7 +122,7 @@ class __TwigTemplate_afde22a5cfd31ab90e16e2b0e2161cc1 extends Template
         yield from [];
     }
 
-    // line 19
+    // line 18
     /**
      * @return iterable<null|scalar|\Stringable>
      */
@@ -133,7 +132,7 @@ class __TwigTemplate_afde22a5cfd31ab90e16e2b0e2161cc1 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 20
+        // line 19
         yield "        ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -141,7 +140,7 @@ class __TwigTemplate_afde22a5cfd31ab90e16e2b0e2161cc1 extends Template
         yield from [];
     }
 
-    // line 23
+    // line 22
     /**
      * @return iterable<null|scalar|\Stringable>
      */
@@ -151,7 +150,7 @@ class __TwigTemplate_afde22a5cfd31ab90e16e2b0e2161cc1 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 24
+        // line 23
         yield "        ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -172,7 +171,7 @@ class __TwigTemplate_afde22a5cfd31ab90e16e2b0e2161cc1 extends Template
      */
     public function getDebugInfo(): array
     {
-        return array (  155 => 24,  145 => 23,  137 => 20,  127 => 19,  119 => 17,  109 => 16,  92 => 6,  82 => 25,  80 => 23,  76 => 21,  74 => 19,  71 => 18,  69 => 16,  56 => 6,  49 => 1,);
+        return array (  154 => 23,  144 => 22,  136 => 19,  126 => 18,  118 => 16,  108 => 15,  91 => 6,  81 => 24,  79 => 22,  75 => 20,  73 => 18,  70 => 17,  68 => 15,  56 => 6,  49 => 1,);
     }
 
     public function getSourceContext(): Source
@@ -187,7 +186,6 @@ class __TwigTemplate_afde22a5cfd31ab90e16e2b0e2161cc1 extends Template
         <link rel=\"stylesheet\" href=\"/styles/nav.css\">
         <link rel=\"stylesheet\" href=\"/styles/home.css\">
         <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css\" integrity=\"sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==\" crossorigin=\"anonymous\" referrerpolicy=\"no-referrer\" />
-        <link rel=\"stylesheet\" href=\"/styles/examplePage.css\">
         <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css\" rel=\"stylesheet\">
         <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js\"></script>
         <script src=\"https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js\" integrity=\"sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==\" crossorigin=\"anonymous\" referrerpolicy=\"no-referrer\"></script>
