@@ -201,6 +201,6 @@ class __TwigTemplate_afde22a5cfd31ab90e16e2b0e2161cc1 extends Template
         {% endblock %}
     </body>
 </html>
-", "base.html.twig", "C:\\Users\\admin\\Desktop\\weddingApp\\templates\\base.html.twig");
+", "base.html.twig", "C:\\Users\\Remek\\Desktop\\newLastWedding\\templates\\base.html.twig");
     }
 }

@@ -105,35 +105,25 @@
             </div>
         </div>
     </section>
-    <section class="gifts">
-        <ul id="listGift">
-            {% for prezent in prezenty %}
-                <li>
-                    {% if prezent.zarezerwowany != NULL %}
-                        {% if prezent.link != NULL %}
-                            <span style="text-decoration: line-through;">{{ prezent.nazwa }}</span> 
-                            <span><a href='{{ prezent.link }}' target="_blank">Link</a></span> 
-                            <input type="checkbox" class="rezerwuj-checkbox" data-id="{{ prezent.id }}" disabled>
-                        {% else %}
-                            <span style="text-decoration: line-through;">{{ prezent.nazwa }}</span>
-                            <span></span> 
-                            <input type="checkbox" class="rezerwuj-checkbox" data-id="{{ prezent.id }}" disabled>
-                        {% endif %}
-                    {% else %}
-                        {% if prezent.link != NULL %}
-                            <span>{{ prezent.nazwa }}</span> 
-                            <span><a href='{{ prezent.link }}' target="_blank">Link</a></span> 
-                            <input type="checkbox" class="rezerwuj-checkbox" data-id="{{ prezent.id }}">
-                        {% else %}
-                            <span>{{ prezent.nazwa }}</span> 
-                            <span></span> 
-                            <input type="checkbox" class="rezerwuj-checkbox" data-id="{{ prezent.id }}">
-                        {% endif %}
-                    {% endif %}
-                </li>
-            {% endfor %}
-        </ul>
-        <button type="checkbox" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalGifts" data-bs-whatever="@getbootstrap"></button>
+    <section class="gifts d-flex justify-content-center align-items-center flex-column">
+        <h2 class="h2 mb-5">Prezenty</h2>
+        <div class="row row-cols-2 g-2 w-75 text-center">
+            <div class="col">
+              <div class="p-3 border bg-light">Row column</div>
+            </div>
+            <div class="col">
+              <div class="p-3 border bg-light">Row column</div>
+            </div>
+            <div class="col">
+                <div class="p-3 border bg-light">Row column</div>
+            </div>
+            <div class="col">
+                <div class="p-3 border bg-light">Row column</div>
+            </div>
+            <div class="col">
+                <div class="p-3 border bg-light">Row column</div>
+            </div>
+        </div>
     </section>
 </div>
 
