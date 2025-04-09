@@ -108,16 +108,36 @@ class __TwigTemplate_426d6c1add30b2e36ec03cfe127d7103 extends Template
     Prezenty
     Potweirdzenie przybycia
 -->
+        <nav class=\"container w-50 position-fixed top-0 start-50 translate-middle-x z-1 bg-transparent mt-1\">
+            <div class=\"row d-flex justify-content-between align-items-center\">
+                <div class=\" d-flex justify-content-center align-items-center\">
+                    <ul class=\"nav nav-pills\">
+                        <li class=\"nav-item\">
+                            <a class=\"nav-link font-weight-bold\" href=\"#\">Strona główna</a>
+                        </li>
+                        <li class=\"nav-item\">
+                            <a class=\"nav-link\" href=\"#\">Atrakcje</a>
+                        </li>
+                        <li class=\"nav-item\">
+                            <a class=\"nav-link\" href=\"#\">Prezenty</a>
+                        </li>
+                        <li class=\"nav-item\">
+                            <a class=\"nav-link\" href=\"#\">Kontakt</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
 <div class=\"container-fluid m-0\">
     <section class=\"home vh-100 p-0 m-0 d-flex justify-content-center align-items-center\">
         <div class=\"contentHomeSection d-flex flex-column justify-content-center align-items-center text-center\">
             <h1 class=\"display-1 fw-normal mb-5\">";
-        // line 19
-        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape((isset($context["nameOfCouple"]) || array_key_exists("nameOfCouple", $context) ? $context["nameOfCouple"] : (function () { throw new RuntimeError('Variable "nameOfCouple" does not exist.', 19, $this->source); })()), "html", null, true);
+        // line 39
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape((isset($context["nameOfCouple"]) || array_key_exists("nameOfCouple", $context) ? $context["nameOfCouple"] : (function () { throw new RuntimeError('Variable "nameOfCouple" does not exist.', 39, $this->source); })()), "html", null, true);
         yield "</h1>
             <div class=\"date fs-3 fw-bold mt-n1\">";
-        // line 20
-        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape((isset($context["dateOfWedding"]) || array_key_exists("dateOfWedding", $context) ? $context["dateOfWedding"] : (function () { throw new RuntimeError('Variable "dateOfWedding" does not exist.', 20, $this->source); })()), "html", null, true);
+        // line 40
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape((isset($context["dateOfWedding"]) || array_key_exists("dateOfWedding", $context) ? $context["dateOfWedding"] : (function () { throw new RuntimeError('Variable "dateOfWedding" does not exist.', 40, $this->source); })()), "html", null, true);
         yield "</div>
             <div class=\"timerHomeTop\"></div>
         </div>
@@ -134,8 +154,8 @@ class __TwigTemplate_426d6c1add30b2e36ec03cfe127d7103 extends Template
                     na uroczystość zaślubin,
                     która odbędzie się
                     ";
-        // line 35
-        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape((isset($context["dateOfWedding"]) || array_key_exists("dateOfWedding", $context) ? $context["dateOfWedding"] : (function () { throw new RuntimeError('Variable "dateOfWedding" does not exist.', 35, $this->source); })()), "html", null, true);
+        // line 55
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape((isset($context["dateOfWedding"]) || array_key_exists("dateOfWedding", $context) ? $context["dateOfWedding"] : (function () { throw new RuntimeError('Variable "dateOfWedding" does not exist.', 55, $this->source); })()), "html", null, true);
         yield " o godzinie [Godzina]
                     w [Miejsce ceremonii].
                     
@@ -159,35 +179,35 @@ class __TwigTemplate_426d6c1add30b2e36ec03cfe127d7103 extends Template
                 <h3>Ślub</h3>
                 <ul class=\"grid list-unstyled p-4 g-1\">
                     ";
-        // line 57
+        // line 77
         $context['_parent'] = $context;
-        $context['_seq'] = CoreExtension::ensureTraversable((isset($context["datasOfWedding"]) || array_key_exists("datasOfWedding", $context) ? $context["datasOfWedding"] : (function () { throw new RuntimeError('Variable "datasOfWedding" does not exist.', 57, $this->source); })()));
+        $context['_seq'] = CoreExtension::ensureTraversable((isset($context["datasOfWedding"]) || array_key_exists("datasOfWedding", $context) ? $context["datasOfWedding"] : (function () { throw new RuntimeError('Variable "datasOfWedding" does not exist.', 77, $this->source); })()));
         $context['_iterated'] = false;
         foreach ($context['_seq'] as $context["_key"] => $context["dataOfWedding"]) {
-            // line 58
+            // line 78
             yield "                    <li class=\"m-1 p-2\">
                         <h5>";
-            // line 59
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["dataOfWedding"], "header", [], "any", false, false, false, 59), "html", null, true);
+            // line 79
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["dataOfWedding"], "header", [], "any", false, false, false, 79), "html", null, true);
             yield "</h5>
                         <p>";
-            // line 60
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["dataOfWedding"], "content", [], "any", false, false, false, 60), "html", null, true);
+            // line 80
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["dataOfWedding"], "content", [], "any", false, false, false, 80), "html", null, true);
             yield "</p>
                     </li>
                     ";
             $context['_iterated'] = true;
         }
-        // line 62
+        // line 82
         if (!$context['_iterated']) {
-            // line 63
+            // line 83
             yield "                        <li>Brak danych</li>
                     ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_key'], $context['dataOfWedding'], $context['_parent'], $context['_iterated']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 65
+        // line 85
         yield "                </ul>
                 <div class=\"bottomImgBoxContentPlace mw-25 position-relative\">
                     <img src=\"/images/examplePageTwo/examplePageTwoHomeTop.jpg\" alt=\"\" class=\"mw-100\">
@@ -198,35 +218,35 @@ class __TwigTemplate_426d6c1add30b2e36ec03cfe127d7103 extends Template
                 <h3>Wesele</h3>
                 <ul class=\"grid list-unstyled p-4\" >
                     ";
-        // line 74
+        // line 94
         $context['_parent'] = $context;
-        $context['_seq'] = CoreExtension::ensureTraversable((isset($context["datasOfWeddingReception"]) || array_key_exists("datasOfWeddingReception", $context) ? $context["datasOfWeddingReception"] : (function () { throw new RuntimeError('Variable "datasOfWeddingReception" does not exist.', 74, $this->source); })()));
+        $context['_seq'] = CoreExtension::ensureTraversable((isset($context["datasOfWeddingReception"]) || array_key_exists("datasOfWeddingReception", $context) ? $context["datasOfWeddingReception"] : (function () { throw new RuntimeError('Variable "datasOfWeddingReception" does not exist.', 94, $this->source); })()));
         $context['_iterated'] = false;
         foreach ($context['_seq'] as $context["_key"] => $context["dataOfWeddingReception"]) {
-            // line 75
+            // line 95
             yield "                    <li class=\"m-1 p-2\">
                         <h5 class=\"h5\">";
-            // line 76
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["dataOfWeddingReception"], "header", [], "any", false, false, false, 76), "html", null, true);
+            // line 96
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["dataOfWeddingReception"], "header", [], "any", false, false, false, 96), "html", null, true);
             yield "</h5>
                         <p>";
-            // line 77
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["dataOfWeddingReception"], "content", [], "any", false, false, false, 77), "html", null, true);
+            // line 97
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["dataOfWeddingReception"], "content", [], "any", false, false, false, 97), "html", null, true);
             yield "</p>
                     </li>
                     ";
             $context['_iterated'] = true;
         }
-        // line 79
+        // line 99
         if (!$context['_iterated']) {
-            // line 80
+            // line 100
             yield "                        <li>Brak danych</li>
                     ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_key'], $context['dataOfWeddingReception'], $context['_parent'], $context['_iterated']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 82
+        // line 102
         yield "                </ul>
                 <div class=\"bottomImgBoxContentPlace mw-25 position-relative\">
                     <img src=\"/images/examplePageTwo/examplePageTwoHomeTop.jpg\" alt=\"\" class=\"mw-100\">
@@ -241,39 +261,39 @@ class __TwigTemplate_426d6c1add30b2e36ec03cfe127d7103 extends Template
             <div class=\"boxAttractions mt-3 position-relative\">
                 <ul class=\"list-unstyled row justify-content-md-center w-100\">
                     ";
-        // line 95
+        // line 115
         $context['_parent'] = $context;
-        $context['_seq'] = CoreExtension::ensureTraversable((isset($context["attractions"]) || array_key_exists("attractions", $context) ? $context["attractions"] : (function () { throw new RuntimeError('Variable "attractions" does not exist.', 95, $this->source); })()));
+        $context['_seq'] = CoreExtension::ensureTraversable((isset($context["attractions"]) || array_key_exists("attractions", $context) ? $context["attractions"] : (function () { throw new RuntimeError('Variable "attractions" does not exist.', 115, $this->source); })()));
         $context['_iterated'] = false;
         foreach ($context['_seq'] as $context["_key"] => $context["attraction"]) {
-            // line 96
+            // line 116
             yield "                    <li class=\"col d-flex flex-column justify-content-center align-items-center m-1 p-2\">
                         <div class=\"\">";
-            // line 97
-            yield CoreExtension::getAttribute($this->env, $this->source, $context["attraction"], "icons", [], "any", false, false, false, 97);
+            // line 117
+            yield CoreExtension::getAttribute($this->env, $this->source, $context["attraction"], "icons", [], "any", false, false, false, 117);
             yield "</div>
                         <h4>";
-            // line 98
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["attraction"], "header", [], "any", false, false, false, 98), "html", null, true);
+            // line 118
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["attraction"], "header", [], "any", false, false, false, 118), "html", null, true);
             yield "</h4>
                         <p>";
-            // line 99
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["attraction"], "describe", [], "any", false, false, false, 99), "html", null, true);
+            // line 119
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["attraction"], "describe", [], "any", false, false, false, 119), "html", null, true);
             yield "</p>
                     </li>
                     ";
             $context['_iterated'] = true;
         }
-        // line 101
+        // line 121
         if (!$context['_iterated']) {
-            // line 102
+            // line 122
             yield "                        <li>Brak atrakcji</li>
                     ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_key'], $context['attraction'], $context['_parent'], $context['_iterated']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 104
+        // line 124
         yield "                </ul>
             </div>
         </div>
@@ -338,7 +358,7 @@ class __TwigTemplate_426d6c1add30b2e36ec03cfe127d7103 extends Template
                           <a href=\"#\">Link</a>
                         </div>
                         <div class=\"col-3 text-end\">
-                            <button type=\"button\" class=\"btn btn-primary\" data-bs-toggle=\"modal\" data-bs-target=\"#exampleModalGifts\" data-bs-whatever=\"@getbootstrap\">Zarezerwuj</button>
+                            <button type=\"button\" class=\"btn btn-primary\" data-bs-toggle=\"modal\" data-bs-target=\"#exampleModalGifts\" data-bs-whatever=\"@getbootstrap\" disabled>Zarezerwowany</button>
                         </div>
                       </div>
                     </div>
@@ -368,20 +388,31 @@ class __TwigTemplate_426d6c1add30b2e36ec03cfe127d7103 extends Template
             <div class=\"row row-cols-1 row-cols-md-2 gx-4 gy-3 text-center\">
                 <div class=\"col text-center\">
                     <h4>Numery kontatkowe</h4>
-                    <div class=\"row rpw-cols-1 gx-4 gy-3 text-center d-flex justify-content-center align-items-center\">
-                        <div class=\"col-12 d-flex align-items-center justify-content-center flex-column\">
-                            <span>Ikona</span>
+                    <div class=\"row row-cols-1 gx-4 gy-3 text-center d-flex justify-content-center align-items-center\">
+                        <div class=\" d-flex align-items-center justify-content-center flex-column\">
+                            <span><i class=\"fa fa-phone\" aria-hidden=\"true\"></i></span>
                             <span>Imie Nazwisko</span>
                             <span>tel. 123456789</span>
                         </div>
-                        <div class=\"col-12\"></div>
-                        <div class=\"col-12\"></div>
+                        <div class=\"d-flex align-items-center justify-content-center flex-column\">
+                            <span><i class=\"fa fa-phone\" aria-hidden=\"true\"></i></span>
+                            <span>Imie Nazwisko</span>
+                            <span>tel. 123456789</span>
+                        </div>
+                        <div class=\" d-flex align-items-center justify-content-center flex-column\">
+                            <span><i class=\"fa fa-phone\" aria-hidden=\"true\"></i></span>
+                            <span>Imie Nazwisko</span>
+                            <span>tel. 123456789</span>
+                        </div>
                     </div>
                 </div>
                 <div class=\"col\">
                     <h4>Formularz kontaktowy</h4>
-
-                </div>
+                    ";
+        // line 238
+        yield from $this->loadTemplate("form/contactForm.html.twig", "example_page/examplePageTwo.html.twig", 238)->unwrap()->yield(CoreExtension::merge($context, ["contactForm" => (isset($context["contactForm"]) || array_key_exists("contactForm", $context) ? $context["contactForm"] : (function () { throw new RuntimeError('Variable "contactForm" does not exist.', 238, $this->source); })())]));
+        // line 239
+        yield "                </div>
             </div>
         </div>
     </section>
@@ -478,7 +509,7 @@ class __TwigTemplate_426d6c1add30b2e36ec03cfe127d7103 extends Template
      */
     public function getDebugInfo(): array
     {
-        return array (  277 => 104,  270 => 102,  268 => 101,  261 => 99,  257 => 98,  253 => 97,  250 => 96,  245 => 95,  230 => 82,  223 => 80,  221 => 79,  214 => 77,  210 => 76,  207 => 75,  202 => 74,  191 => 65,  184 => 63,  182 => 62,  175 => 60,  171 => 59,  168 => 58,  163 => 57,  138 => 35,  120 => 20,  116 => 19,  105 => 10,  95 => 9,  86 => 7,  76 => 6,  59 => 3,  42 => 1,);
+        return array (  415 => 239,  413 => 238,  297 => 124,  290 => 122,  288 => 121,  281 => 119,  277 => 118,  273 => 117,  270 => 116,  265 => 115,  250 => 102,  243 => 100,  241 => 99,  234 => 97,  230 => 96,  227 => 95,  222 => 94,  211 => 85,  204 => 83,  202 => 82,  195 => 80,  191 => 79,  188 => 78,  183 => 77,  158 => 55,  140 => 40,  136 => 39,  105 => 10,  95 => 9,  86 => 7,  76 => 6,  59 => 3,  42 => 1,);
     }
 
     public function getSourceContext(): Source
@@ -498,6 +529,26 @@ class __TwigTemplate_426d6c1add30b2e36ec03cfe127d7103 extends Template
     Prezenty
     Potweirdzenie przybycia
 -->
+        <nav class=\"container w-50 position-fixed top-0 start-50 translate-middle-x z-1 bg-transparent mt-1\">
+            <div class=\"row d-flex justify-content-between align-items-center\">
+                <div class=\" d-flex justify-content-center align-items-center\">
+                    <ul class=\"nav nav-pills\">
+                        <li class=\"nav-item\">
+                            <a class=\"nav-link font-weight-bold\" href=\"#\">Strona główna</a>
+                        </li>
+                        <li class=\"nav-item\">
+                            <a class=\"nav-link\" href=\"#\">Atrakcje</a>
+                        </li>
+                        <li class=\"nav-item\">
+                            <a class=\"nav-link\" href=\"#\">Prezenty</a>
+                        </li>
+                        <li class=\"nav-item\">
+                            <a class=\"nav-link\" href=\"#\">Kontakt</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
 <div class=\"container-fluid m-0\">
     <section class=\"home vh-100 p-0 m-0 d-flex justify-content-center align-items-center\">
         <div class=\"contentHomeSection d-flex flex-column justify-content-center align-items-center text-center\">
@@ -650,7 +701,7 @@ class __TwigTemplate_426d6c1add30b2e36ec03cfe127d7103 extends Template
                           <a href=\"#\">Link</a>
                         </div>
                         <div class=\"col-3 text-end\">
-                            <button type=\"button\" class=\"btn btn-primary\" data-bs-toggle=\"modal\" data-bs-target=\"#exampleModalGifts\" data-bs-whatever=\"@getbootstrap\">Zarezerwuj</button>
+                            <button type=\"button\" class=\"btn btn-primary\" data-bs-toggle=\"modal\" data-bs-target=\"#exampleModalGifts\" data-bs-whatever=\"@getbootstrap\" disabled>Zarezerwowany</button>
                         </div>
                       </div>
                     </div>
@@ -680,19 +731,27 @@ class __TwigTemplate_426d6c1add30b2e36ec03cfe127d7103 extends Template
             <div class=\"row row-cols-1 row-cols-md-2 gx-4 gy-3 text-center\">
                 <div class=\"col text-center\">
                     <h4>Numery kontatkowe</h4>
-                    <div class=\"row rpw-cols-1 gx-4 gy-3 text-center d-flex justify-content-center align-items-center\">
-                        <div class=\"col-12 d-flex align-items-center justify-content-center flex-column\">
-                            <span>Ikona</span>
+                    <div class=\"row row-cols-1 gx-4 gy-3 text-center d-flex justify-content-center align-items-center\">
+                        <div class=\" d-flex align-items-center justify-content-center flex-column\">
+                            <span><i class=\"fa fa-phone\" aria-hidden=\"true\"></i></span>
                             <span>Imie Nazwisko</span>
                             <span>tel. 123456789</span>
                         </div>
-                        <div class=\"col-12\"></div>
-                        <div class=\"col-12\"></div>
+                        <div class=\"d-flex align-items-center justify-content-center flex-column\">
+                            <span><i class=\"fa fa-phone\" aria-hidden=\"true\"></i></span>
+                            <span>Imie Nazwisko</span>
+                            <span>tel. 123456789</span>
+                        </div>
+                        <div class=\" d-flex align-items-center justify-content-center flex-column\">
+                            <span><i class=\"fa fa-phone\" aria-hidden=\"true\"></i></span>
+                            <span>Imie Nazwisko</span>
+                            <span>tel. 123456789</span>
+                        </div>
                     </div>
                 </div>
                 <div class=\"col\">
                     <h4>Formularz kontaktowy</h4>
-
+                    {% include 'form/contactForm.html.twig' with { contactForm: contactForm } %}
                 </div>
             </div>
         </div>
@@ -762,6 +821,6 @@ class __TwigTemplate_426d6c1add30b2e36ec03cfe127d7103 extends Template
       </div>
     </div>
   </div>
-{% endblock %}", "example_page/examplePageTwo.html.twig", "C:\\Users\\admin\\Desktop\\newLastWedding\\templates\\example_page\\examplePageTwo.html.twig");
+{% endblock %}", "example_page/examplePageTwo.html.twig", "C:\\Users\\Remek\\Desktop\\newLastWedding\\templates\\example_page\\examplePageTwo.html.twig");
     }
 }

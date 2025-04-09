@@ -5,12 +5,24 @@ namespace App\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
+use App\Form\ContactType;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Form\FormFactoryInterface;
 
 final class ExamplePageTwoController extends AbstractController
 {
     #[Route('/examplePageTwo', name: 'app_example_page_two')]
-    public function index(): Response
+    public function index(Request $request, FormFactoryInterface $formFactory): Response
     {
+        $form = $formFactory->create(ContactType::class);
+        $form->handleRequest($request);
+    
+        if ($form->isSubmitted() && $form->isValid()) {
+            $data = $form->getData();
+            $this->addFlash('success', 'Dziękujemy za wiadomość!');
+            return $this->redirectToRoute('app_example_page_two');
+        }
+
         $datasOfWedding =[
             [
                 'header'=>'Data:',
@@ -75,6 +87,7 @@ final class ExamplePageTwoController extends AbstractController
             'datasOfWedding' => $datasOfWedding,
             'datasOfWeddingReception' => $datasOfWeddingReception,
             'attractions' => $attractions,
+            'contactForm' => $form->createView(),
         ]);
     }
 }
