@@ -280,21 +280,108 @@ class __TwigTemplate_426d6c1add30b2e36ec03cfe127d7103 extends Template
     </section>
     <section class=\"gifts d-flex justify-content-center align-items-center flex-column\">
         <h2 class=\"h2 mb-5\">Prezenty</h2>
-        <div class=\"row row-cols-2 g-2 w-75 text-center\">
-            <div class=\"col\">
-              <div class=\"p-3 border bg-light\">Row column</div>
+        <div class=\"container w-100 mx-auto mt-4\">
+            <div class=\"row row-cols-1 row-cols-md-2 gx-4 gy-3 text-center\">
+                <div class=\"col\">
+                  <div class=\"p-4 bg-light border rounded shadow-sm\">
+                    <div class=\"row align-items-center\">
+                      <div class=\"col-6 text-start\">
+                        <h4 class=\"m-0\">Prezent 1</h4>
+                      </div>
+                      <div class=\"col\">
+                        <a href=\"#\">Link</a>
+                      </div>
+                      <div class=\"col-3 text-end\">
+                        <button type=\"button\" class=\"btn btn-primary\" data-bs-toggle=\"modal\" data-bs-target=\"#exampleModalGifts\" data-bs-whatever=\"@getbootstrap\">Zarezerwuj</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class=\"col\">
+                    <div class=\"p-4 bg-light border rounded shadow-sm\">
+                      <div class=\"row align-items-center\">
+                        <div class=\"col-6 text-start\">
+                          <h4 class=\"m-0\">Prezent 1</h4>
+                        </div>
+                        <div class=\"col\">
+                          <a href=\"#\">Link</a>
+                        </div>
+                        <div class=\"col-3 text-end\">
+                            <button type=\"button\" class=\"btn btn-primary\" data-bs-toggle=\"modal\" data-bs-target=\"#exampleModalGifts\" data-bs-whatever=\"@getbootstrap\">Zarezerwuj</button>
+
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                <div class=\"col\">
+                    <div class=\"p-4 bg-light border rounded shadow-sm\">
+                      <div class=\"row align-items-center\">
+                        <div class=\"col-6 text-start\">
+                          <h4 class=\"m-0\">Prezent 1</h4>
+                        </div>
+                        <div class=\"col\">
+                          <a href=\"#\">Link</a>
+                        </div>
+                        <div class=\"col-3 text-end\">
+                            <button type=\"button\" class=\"btn btn-primary\" data-bs-toggle=\"modal\" data-bs-target=\"#exampleModalGifts\" data-bs-whatever=\"@getbootstrap\">Zarezerwuj</button>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                <div class=\"col\">
+                    <div class=\"p-4 bg-light border rounded shadow-sm\">
+                      <div class=\"row align-items-center\">
+                        <div class=\"col-6 text-start\">
+                          <h4 class=\"m-0\">Prezent 1</h4>
+                        </div>
+                        <div class=\"col\">
+                          <a href=\"#\">Link</a>
+                        </div>
+                        <div class=\"col-3 text-end\">
+                            <button type=\"button\" class=\"btn btn-primary\" data-bs-toggle=\"modal\" data-bs-target=\"#exampleModalGifts\" data-bs-whatever=\"@getbootstrap\">Zarezerwuj</button>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                <div class=\"col\">
+                    <div class=\"p-4 bg-light border rounded shadow-sm\">
+                      <div class=\"row align-items-center\">
+                        <div class=\"col-6 text-start\">
+                          <h4 class=\"m-0\">Prezent 1</h4>
+                        </div>
+                        <div class=\"col\">
+                          <a href=\"#\">Link</a>
+                        </div>
+                        <div class=\"col-3 text-end\">
+                            <button type=\"button\" class=\"btn btn-primary\" data-bs-toggle=\"modal\" data-bs-target=\"#exampleModalGifts\" data-bs-whatever=\"@getbootstrap\">Zarezerwuj</button>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                  
+              </div>
             </div>
-            <div class=\"col\">
-              <div class=\"p-3 border bg-light\">Row column</div>
-            </div>
-            <div class=\"col\">
-                <div class=\"p-3 border bg-light\">Row column</div>
-            </div>
-            <div class=\"col\">
-                <div class=\"p-3 border bg-light\">Row column</div>
-            </div>
-            <div class=\"col\">
-                <div class=\"p-3 border bg-light\">Row column</div>
+    </section>
+    <section class=\"contact container w-100 d-flex justify-content-center align-items-center flex-column\">
+        <h2 >Kontakt</h2>
+        <div class=\"container-fluid mx-auto mt-4\">
+            <div class=\"row row-cols-1 row-cols-md-2 gx-4 gy-3 text-center\">
+                <div class=\"col text-center\">
+                    <h4>Numery kontatkowe</h4>
+                    <div class=\"row rpw-cols-1 gx-4 gy-3 text-center d-flex justify-content-center align-items-center\">
+                        <div class=\"col-12 d-flex align-items-center justify-content-center flex-column\">
+                            <span>Ikona</span>
+                            <span>Imie Nazwisko</span>
+                            <span>tel. 123456789</span>
+                        </div>
+                        <div class=\"col-12\"></div>
+                        <div class=\"col-12\"></div>
+                    </div>
+                </div>
+                <div class=\"col\">
+                    <h4>Formularz kontaktowy</h4>
+
+                </div>
             </div>
         </div>
     </section>
@@ -358,7 +445,7 @@ class __TwigTemplate_426d6c1add30b2e36ec03cfe127d7103 extends Template
         </div>
         <div class=\"modal-footer\">
           <button type=\"button\" class=\"btn btn-secondary\" data-bs-dismiss=\"modal\">Wyjdź</button>
-          <button type=\"button\" class=\"btn btn-primary\">Kupię</button>
+          <button type=\"button\" class=\"btn btn-primary\">Zakupię</button>
         </div>
       </div>
     </div>
@@ -505,21 +592,108 @@ class __TwigTemplate_426d6c1add30b2e36ec03cfe127d7103 extends Template
     </section>
     <section class=\"gifts d-flex justify-content-center align-items-center flex-column\">
         <h2 class=\"h2 mb-5\">Prezenty</h2>
-        <div class=\"row row-cols-2 g-2 w-75 text-center\">
-            <div class=\"col\">
-              <div class=\"p-3 border bg-light\">Row column</div>
+        <div class=\"container w-100 mx-auto mt-4\">
+            <div class=\"row row-cols-1 row-cols-md-2 gx-4 gy-3 text-center\">
+                <div class=\"col\">
+                  <div class=\"p-4 bg-light border rounded shadow-sm\">
+                    <div class=\"row align-items-center\">
+                      <div class=\"col-6 text-start\">
+                        <h4 class=\"m-0\">Prezent 1</h4>
+                      </div>
+                      <div class=\"col\">
+                        <a href=\"#\">Link</a>
+                      </div>
+                      <div class=\"col-3 text-end\">
+                        <button type=\"button\" class=\"btn btn-primary\" data-bs-toggle=\"modal\" data-bs-target=\"#exampleModalGifts\" data-bs-whatever=\"@getbootstrap\">Zarezerwuj</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class=\"col\">
+                    <div class=\"p-4 bg-light border rounded shadow-sm\">
+                      <div class=\"row align-items-center\">
+                        <div class=\"col-6 text-start\">
+                          <h4 class=\"m-0\">Prezent 1</h4>
+                        </div>
+                        <div class=\"col\">
+                          <a href=\"#\">Link</a>
+                        </div>
+                        <div class=\"col-3 text-end\">
+                            <button type=\"button\" class=\"btn btn-primary\" data-bs-toggle=\"modal\" data-bs-target=\"#exampleModalGifts\" data-bs-whatever=\"@getbootstrap\">Zarezerwuj</button>
+
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                <div class=\"col\">
+                    <div class=\"p-4 bg-light border rounded shadow-sm\">
+                      <div class=\"row align-items-center\">
+                        <div class=\"col-6 text-start\">
+                          <h4 class=\"m-0\">Prezent 1</h4>
+                        </div>
+                        <div class=\"col\">
+                          <a href=\"#\">Link</a>
+                        </div>
+                        <div class=\"col-3 text-end\">
+                            <button type=\"button\" class=\"btn btn-primary\" data-bs-toggle=\"modal\" data-bs-target=\"#exampleModalGifts\" data-bs-whatever=\"@getbootstrap\">Zarezerwuj</button>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                <div class=\"col\">
+                    <div class=\"p-4 bg-light border rounded shadow-sm\">
+                      <div class=\"row align-items-center\">
+                        <div class=\"col-6 text-start\">
+                          <h4 class=\"m-0\">Prezent 1</h4>
+                        </div>
+                        <div class=\"col\">
+                          <a href=\"#\">Link</a>
+                        </div>
+                        <div class=\"col-3 text-end\">
+                            <button type=\"button\" class=\"btn btn-primary\" data-bs-toggle=\"modal\" data-bs-target=\"#exampleModalGifts\" data-bs-whatever=\"@getbootstrap\">Zarezerwuj</button>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                <div class=\"col\">
+                    <div class=\"p-4 bg-light border rounded shadow-sm\">
+                      <div class=\"row align-items-center\">
+                        <div class=\"col-6 text-start\">
+                          <h4 class=\"m-0\">Prezent 1</h4>
+                        </div>
+                        <div class=\"col\">
+                          <a href=\"#\">Link</a>
+                        </div>
+                        <div class=\"col-3 text-end\">
+                            <button type=\"button\" class=\"btn btn-primary\" data-bs-toggle=\"modal\" data-bs-target=\"#exampleModalGifts\" data-bs-whatever=\"@getbootstrap\">Zarezerwuj</button>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                  
+              </div>
             </div>
-            <div class=\"col\">
-              <div class=\"p-3 border bg-light\">Row column</div>
-            </div>
-            <div class=\"col\">
-                <div class=\"p-3 border bg-light\">Row column</div>
-            </div>
-            <div class=\"col\">
-                <div class=\"p-3 border bg-light\">Row column</div>
-            </div>
-            <div class=\"col\">
-                <div class=\"p-3 border bg-light\">Row column</div>
+    </section>
+    <section class=\"contact container w-100 d-flex justify-content-center align-items-center flex-column\">
+        <h2 >Kontakt</h2>
+        <div class=\"container-fluid mx-auto mt-4\">
+            <div class=\"row row-cols-1 row-cols-md-2 gx-4 gy-3 text-center\">
+                <div class=\"col text-center\">
+                    <h4>Numery kontatkowe</h4>
+                    <div class=\"row rpw-cols-1 gx-4 gy-3 text-center d-flex justify-content-center align-items-center\">
+                        <div class=\"col-12 d-flex align-items-center justify-content-center flex-column\">
+                            <span>Ikona</span>
+                            <span>Imie Nazwisko</span>
+                            <span>tel. 123456789</span>
+                        </div>
+                        <div class=\"col-12\"></div>
+                        <div class=\"col-12\"></div>
+                    </div>
+                </div>
+                <div class=\"col\">
+                    <h4>Formularz kontaktowy</h4>
+
+                </div>
             </div>
         </div>
     </section>
@@ -583,11 +757,11 @@ class __TwigTemplate_426d6c1add30b2e36ec03cfe127d7103 extends Template
         </div>
         <div class=\"modal-footer\">
           <button type=\"button\" class=\"btn btn-secondary\" data-bs-dismiss=\"modal\">Wyjdź</button>
-          <button type=\"button\" class=\"btn btn-primary\">Kupię</button>
+          <button type=\"button\" class=\"btn btn-primary\">Zakupię</button>
         </div>
       </div>
     </div>
   </div>
-{% endblock %}", "example_page/examplePageTwo.html.twig", "C:\\Users\\Remek\\Desktop\\newLastWedding\\templates\\example_page\\examplePageTwo.html.twig");
+{% endblock %}", "example_page/examplePageTwo.html.twig", "C:\\Users\\admin\\Desktop\\newLastWedding\\templates\\example_page\\examplePageTwo.html.twig");
     }
 }
