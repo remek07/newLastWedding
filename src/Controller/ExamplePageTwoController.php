@@ -38,7 +38,7 @@ final class ExamplePageTwoController extends AbstractController
             ],
             [
                 'header'=>'Adres:',
-                'content'=>'Świętojańska 8, 00-278 Warszawa',
+                'content'=>'Klasztorna 8, 00-278 Warszawa',
             ],
         ];
         $datasOfWeddingReception =[
@@ -82,8 +82,8 @@ final class ExamplePageTwoController extends AbstractController
             ]
             ];
         return $this->render('example_page/examplePageTwo.html.twig', [
-            'nameOfCouple' => 'Justyna i Krzysztof',
-            'dateOfWedding' => '16-09-2023',
+            'nameOfCouple' => 'Justyna & Krzysztof',
+            'dateOfWedding' => '16.09.2025',
             'datasOfWedding' => $datasOfWedding,
             'datasOfWeddingReception' => $datasOfWeddingReception,
             'attractions' => $attractions,

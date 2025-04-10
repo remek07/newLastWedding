@@ -27,31 +27,105 @@
     --fontBody: "Libre Baskerville", serif;
     --fontSatisfy: "Satisfy", cursive;
     --colorHomeWhite: #F5F1E6;
-    --colorBackground: #E3C6A4;
+    --colorBackground: #fce8d2;
+    --colorGreen: #8e9775 ;
+    --colorBrown: #a67c52 ;
+    --fontColor: #c4b099;
 }
-.container-fluid {
-    padding: 0px;
-    font-family: var(--fontBody);
-    background-color:#fff;
+h1,h2,h3,h4,h5,h6{
+  font-family: var(--fontSatisfy);
+  color: #fff !important;
+  text-shadow: 1px 1px var(--colorBrown),-1px -1px var(--colorBrown), 
+  -1px 1px var(--colorBrown), 1px -1px var(--colorBrown);
+}
+h2{
+  font-size: 4rem !important;
+}
+h3{
+  font-size: 3.2rem !important;
+}
+h5{
+  font-size: 2.2rem !important;
+}
+section{
+  background-color: var(--colorBackground);
+  color: var(--fontColor);
+}
+nav div div{
+  font-size: 1.2rem;
+  color: #fff !important;
+  background-color: var(--colorGreen);
+  color: var(--colorHomeWhite) !important;
+  border-radius: 0px 0px 20px 20px;
+}
+nav div div ul li a{
+  color: var(--colorHomeWhite) !important;
+  font-family: var(--fontBody);
+  font-size: 1.5rem;
+}
+.container-fluid{
+  background-color: var(--colorBackground);
+  font-family: var(--fontBody);
+  padding: 0px;
+  color: var(--colorHomeWhite);
+}
+.btn-primary{
+  background-color: var(--colorGreen);
+  border-color: var(--colorGreen);
+}
+a.btn-link{
+  color: var(--colorHomeWhite) !important;
+  font-family: var(--fontBody);
+  font-size: 1rem;
+  text-decoration: none !important;
+  display: inline-block;
+  padding: 0.75rem 0.75rem;
+  background-color: var(--colorGreen);
+  border-radius: 0.375rem;
+  line-height: 1.5;
+  vertical-align: middle;
+}
+iframe{
+opacity: 0.8;
+}
+iframe:hover{
+  opacity: 1;
+  transition: all 0.5s ease-in-out;
 }
 section.home{
     background: url(../images/examplePageTwo/examplePageTwoHomeTop.jpg) no-repeat center center;
     background-size: cover;
     color: var(--colorHomeWhite);
     text-shadow: 2px 2px 4px #000000;
+    box-shadow: 0px -49px 52px 28px rgba(252,232,210,1) inset;
+    -webkit-box-shadow: 0px -49px 52px 28px rgba(252,232,210,1) inset;
+    -moz-box-shadow: 0px -49px 52px 28px rgba(252,232,210,1) inset;
 }
 section.home .contentHomeSection h1{
     font-family: var(--fontSatisfy);
     font-style: italic;
+    font-size: 7rem !important;
+    text-shadow: 2px 2px var(--colorBrown),-2px -2px var(--colorBrown), 
+    -2px 2px var(--colorBrown), 2px -2px var(--colorBrown);
 }
 .contentInvitationSection{
-    min-height: 400px;
     max-width: 900px;
     margin-left: 100px;
+}
+.rightInvitationContent{
+  color: var(--colorBrown);
 }
 .leftImageInvitation img{
     height: 400px;
     width: 400px;
+}
+section.place .boxPlace{
+  background-size: 100% cover !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  -webkit-box-shadow: inset 0px 0px 13px 16px rgba(252, 232, 210, 1);
+  -moz-box-shadow: inset 0px 0px 13px 16px rgba(252, 232, 210, 1);
+  box-shadow: inset 0px 0px 13px 16px rgba(252, 232, 210, 1);
 }
 section.place .boxPlace ul{
   display: grid;
@@ -59,6 +133,51 @@ section.place .boxPlace ul{
   gap: 15px;
 }
 section.place .boxPlace ul li{
-  background-color: red;
   border-radius: 12px;
+  background-color: var(--colorBackground);
+  color: var(--colorBrown);
+}
+section.place .boxPlace ul li p{
+  margin-bottom: 0px;
+}
+.boxAttractions ul li{
+  background-color: var(--colorGreen);
+}
+.boxAttractions ul li .contentAttractionBox{
+  border: 2px solid var(--colorBackground);
+  background-color: var(--colorGreen);
+}
+.boxAttractions ul li .contentAttractionBox i{
+  font-size: 3rem;
+  text-shadow: 1px 1px var(--colorBrown),-1px -1px var(--colorBrown), 
+  -1px 1px var(--colorBrown), 1px -1px var(--colorBrown);
+}
+.boxAttractions ul li .contentAttractionBox p{
+  color: var(--colorHomeWhite);
+}
+section.gifts{
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  background-attachment: fixed !important;
+  -webkit-box-shadow: inset 0px 0px 13px 16px rgba(252, 232, 210, 1);
+  -moz-box-shadow: inset 0px 0px 13px 16px rgba(252, 232, 210, 1); 
+}
+section.contact h4{
+  font-size: 2rem;
+}
+section.contact .contactRightContent h4{
+  color: var(--colorGreen) !important;
+}
+section.contact .contactLeftContent{
+    background-color: var(--colorGreen);
+}
+section.contact .contactLeftContent .borderInset{
+  border: 2px solid var(--colorBackground);
+}
+section.contact .contactRightContent{
+  background-color: var(--colorHomeWhite);
+}
+section.contact .contactRightContent .borderInsetRight{
+  border: 2px solid var(--colorGreen);
 }
