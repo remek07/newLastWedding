@@ -95,6 +95,6 @@ class __TwigTemplate_663bfb67a6bd325fc694f533e5f40089 extends Template
             </ul>
         </div>
     </div>
-</nav>", "home/nav.html.twig", "C:\\Users\\Remek\\Desktop\\newLastWedding\\templates\\home\\nav.html.twig");
+</nav>", "home/nav.html.twig", "C:\\Users\\admin\\Desktop\\newLastWedding\\templates\\home\\nav.html.twig");
     }
 }

@@ -1004,6 +1004,6 @@ class __TwigTemplate_6c1ecaa257b0d714e46df655ac23b841 extends Template
 
 </script>
 {% endblock %}
-", "example_page/index.html.twig", "C:\\Users\\Remek\\Desktop\\newLastWedding\\templates\\example_page\\index.html.twig");
+", "example_page/index.html.twig", "C:\\Users\\admin\\Desktop\\newLastWedding\\templates\\example_page\\index.html.twig");
     }
 }

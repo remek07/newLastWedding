@@ -129,6 +129,6 @@ Elp
 
 Elp
 {% endblock %}
-", "home/index.html.twig", "C:\\Users\\Remek\\Desktop\\newLastWedding\\templates\\home\\index.html.twig");
+", "home/index.html.twig", "C:\\Users\\admin\\Desktop\\newLastWedding\\templates\\home\\index.html.twig");
     }
 }

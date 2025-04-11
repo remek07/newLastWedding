@@ -18,31 +18,45 @@
                 <div class=" d-flex justify-content-center align-items-center">
                     <ul class="nav nav-pills">
                         <li class="nav-item p-2">
-                            <a class="nav-link font-weight-bold" href="#">Strona główna</a>
+                            <a class="nav-link" href="#home">Strona główna</a>
                         </li>
                         <li class="nav-item p-2">
-                            <a class="nav-link" href="#">Atrakcje</a>
+                          <a class="nav-link" href="#invitation">Zaproszenie</a>
                         </li>
                         <li class="nav-item p-2">
-                            <a class="nav-link" href="#">Prezenty</a>
+                          <a class="nav-link" href="#place">Miejsca</a>
                         </li>
                         <li class="nav-item p-2">
-                            <a class="nav-link" href="#">Kontakt</a>
+                            <a class="nav-link" href="#attractions">Atrakcje</a>
+                        </li>
+                        <li class="nav-item p-2">
+                            <a class="nav-link" href="#gifts">Prezenty</a>
+                        </li>
+                        <li class="nav-item p-2">
+                            <a class="nav-link" href="#contact">Kontakt</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
 <div class="container-fluid m-0 sc">
-    <section class="home vh-100 p-0 m-0 d-flex justify-content-center align-items-center">
-        <div class="contentHomeSection d-flex flex-column justify-content-center align-items-center text-center">
-            <h1 class="fw-normal mb-5">{{nameOfCouple}}</h1>
-            <div class="date fs-3 fw-bold mt-n1">{{dateOfWedding}}</div>
-            <div class="timerHomeTop"></div>
-            <a href="" class="btn-link">Zapraszamy</a>
+    <section id="home" class="home vh-100 p-0 m-0 d-flex justify-content-center align-items-center">
+        <div class="contentHomeSection d-flex flex-column justify-content-center align-items-center text-center w-50 rounded">
+            <div class="row w-100">
+              <div class="col-4 leftColTopHome d-flex align-items-center justify-content-center flex-column p-4">
+                <h2>Ten dzień</h2>
+                <div class="date fs-3">{{dateOfWedding}}</div>
+                <div class="timerHomeTop"></div>
+                <p>Jest dla nas naj</p>
+                <a href="" class="btn-link">Zapraszamy</a>
+              </div>
+              <div class="col-8 rightColTopHome p-5 d-flex justify-content-center align-items-center flex-column">
+                <h1 class="">{{nameOfCouple|raw}}</h1>
+              </div>
+            </div>
         </div>
     </section>
-    <section class="invitation w-100 pb-5 pt-5 mt-5 mb-5 d-flex justify-content-center align-items-center flex-column">
+    <section id="invitation" class="invitation w-100 pb-5 pt-5 mt-5 mb-5 d-flex justify-content-center align-items-center flex-column">
         <div class="contentInvitationSection w-75 shadow-lg p-5 mb-5 bg-body rounded position-relative row">
             <div class="leftImageInvitation col-sm-6 col-md-4 col-lg-3 position-relative">
                 <img src="/images/examplePageTwo/examplePageTwoHomeTop.jpg" alt="" class="rounded-circle overflow-hidden mb-4 object-fit-fill position-absolute top-50 start-0 translate-middle">
@@ -53,10 +67,8 @@
                     {{nameOfCouple}}
                     na uroczystość zaślubin,
                     która odbędzie się
-                    <br/>
                     {{dateOfWedding}} o godzinie 13:00
                     w Kościele Matki Boskiej, Warszawa.
-                    <br/>
                     Po ceremonii serdecznie zapraszamy na przyjęcie weselne,
                     które odbędzie się w [Miejsce przyjęcia].
                     <b>
@@ -71,7 +83,7 @@
         </div>
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalConfirm" data-bs-whatever="@getbootstrap">Potwierdź obecność</button>
     </section>
-    <section class="place d-flex justify-content-center align-items-center flex-column mb-5">
+    <section id="place" class="place d-flex justify-content-center align-items-center flex-column mb-5">
         <h2 class="h2 mb-2">Gdzie i kiedy</h2>
         <div class="container-fluid mx-auto mt-4 d-flex justify-content-center">
           <div class="row row-cols-1 row-cols-md-2 gx-4 gy-3 text-center w-100">
@@ -112,7 +124,7 @@
         </div>
       </div>
     </section>
-    <section class="attractions w-100 p-5 d-flex justify-content-center align-items-center flex-column mb-5">
+    <section id="attractions" class="attractions w-100 p-5 d-flex justify-content-center align-items-center flex-column mb-5">
         <div class="w-100 text-center" >
             <h2 class="h2 mb-2">Atrakcje</h2>
             <div class="boxAttractions mt-2 position-relative">
@@ -133,15 +145,15 @@
             </div>
         </div>
     </section>
-    <section class="gifts d-flex justify-content-center align-items-center flex-column p-5" style="background: url(/images/examplePageTwo/examplePageTwoGiftBackground.jpg);">
+    <section id="gifts" class="gifts d-flex justify-content-center align-items-center flex-column p-5" style="background: url(/images/examplePageTwo/examplePageTwoGiftBackground.jpg);">
         <h2 class="h2 mb-5">Prezenty</h2>
         <div class="container w-100 mx-auto mt-4">
             <div class="row row-cols-1 row-cols-md-2 gx-4 gy-3 text-center">
                 <div class="col">
                   <div class="p-4 bg-light border rounded shadow-sm">
                     <div class="row align-items-center">
-                      <div class="col-4 text-start">
-                        <h4 class="m-0">Prezent 1</h4>
+                      <div class="col-6 text-start">
+                        <p class="m-0">Zestaw do robienia sushi</p>
                       </div>
                       <div class="col">
                         <a href="#">Link</a>
@@ -155,8 +167,8 @@
                 <div class="col">
                     <div class="p-4 bg-light border rounded shadow-sm">
                       <div class="row align-items-center">
-                        <div class="col-4 text-start">
-                          <h4 class="m-0">Prezent 1</h4>
+                        <div class="col-6 text-start">
+                          <p class="m-0">Zdrapki na loterię</p>
                         </div>
                         <div class="col">
                           <a href="#">Link</a>
@@ -171,8 +183,8 @@
                 <div class="col">
                     <div class="p-4 bg-light border rounded shadow-sm">
                       <div class="row align-items-center">
-                        <div class="col-4 text-start">
-                          <h4 class="m-0">Prezent 1</h4>
+                        <div class="col-6 text-start">
+                          <p class="m-0">Robot kuchenny</p>
                         </div>
                         <div class="col">
                           <a href="#">Link</a>
@@ -186,8 +198,8 @@
                 <div class="col">
                     <div class="p-4 bg-light border rounded shadow-sm">
                       <div class="row align-items-center">
-                        <div class="col-4 text-start">
-                          <h4 class="m-0">Prezent 1</h4>
+                        <div class="col-6 text-start">
+                          <p class="m-0">Ekspres do kawy</p>
                         </div>
                         <div class="col">
                           <a href="#">Link</a>
@@ -201,8 +213,8 @@
                 <div class="col">
                     <div class="p-4 bg-light border rounded shadow-sm">
                       <div class="row align-items-center">
-                        <div class="col-4 text-start">
-                          <h4 class="m-0">Prezent 1</h4>
+                        <div class="col-6 text-start">
+                          <p class="m-0">Album na wspólne wspomnienia</p>
                         </div>
                         <div class="col">
                           <a href="#">Link</a>
@@ -217,8 +229,9 @@
               </div>
             </div>
     </section>
-    <section class="contact container w-100 d-flex justify-content-center align-items-center flex-column p-5">
+    <section id="contact" class="contact container w-100 d-flex justify-content-center align-items-center flex-column p-5">
         <h2 >Kontakt</h2>
+        <p>Jeżeli macie jakieś pytania śmiało dzwońcie/piszcie na wszystko odpowiemy.</p>
         <div class="container-fluid mx-auto mt-4">
             <div class="row row-cols-1 row-cols-md-2 gx-4 gy-3 text-center">
                 <div class="col text-center">
@@ -229,17 +242,17 @@
                             <div class="d-flex align-items-center justify-content-center flex-column contactLeftContentBox">
                                 <span><i class="fa fa-phone" aria-hidden="true"></i></span>
                                 <span>Imie Nazwisko</span>
-                                <span>tel. 123456789</span>
+                                <span><a href="tel:123456789">tel. 123456789</a></span>
                             </div>
                             <div class="d-flex align-items-center justify-content-center flex-column contactLeftContentBox">
                                 <span><i class="fa fa-phone" aria-hidden="true"></i></span>
                                 <span>Imie Nazwisko</span>
-                                <span>tel. 123456789</span>
+                                <span><a href="tel:123456789">tel. 123456789</a></span>
                             </div>
                             <div class=" d-flex align-items-center justify-content-center flex-column contactLeftContentBox">
                                 <span><i class="fa fa-phone" aria-hidden="true"></i></span>
                                 <span>Imie Nazwisko</span>
-                                <span>tel. 123456789</span>
+                                <span><a href="tel:123456789">tel. 123456789</a></span>
                             </div>
                         </div>
                       </div>
@@ -256,6 +269,12 @@
             </div>
         </div>
     </section>
+    <footer class="d-flex align-items-center justify-content-center flex-column mt-5">
+        <div class="footerContentBox p-5 rounded w-50 text-center">
+          <p>Zapraszamy !!!</p>
+          <h1>{{nameOfCouple}}</h1>
+        </div>
+    </footer>
 </div>
 
 <div class="modal fade" id="exampleModalConfirm" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
