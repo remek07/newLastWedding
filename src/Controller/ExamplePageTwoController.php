@@ -82,7 +82,7 @@ final class ExamplePageTwoController extends AbstractController
             ]
             ];
         return $this->render('example_page/examplePageTwo.html.twig', [
-            'nameOfCouple' => 'Justyna </br> & </br> Krzysztof',
+            'nameOfCouple' => 'Justyna & Krzysztof',
             'dateOfWedding' => '16.09.2025',
             'datasOfWedding' => $datasOfWedding,
             'datasOfWeddingReception' => $datasOfWeddingReception,

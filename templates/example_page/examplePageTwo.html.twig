@@ -13,7 +13,7 @@
     Prezenty
     Potweirdzenie przybycia
 -->
-        <nav class="container w-50 position-fixed top-0 start-50 translate-middle-x z-1 bg-transparent p-0 m-0">
+        <nav class="container-fluid position-fixed top-0 start-50 translate-middle-x z-1 bg-transparent p-0 m-0">
             <div class="row d-flex justify-content-between align-items-center">
                 <div class=" d-flex justify-content-center align-items-center">
                     <ul class="nav nav-pills">
@@ -40,42 +40,48 @@
             </div>
         </nav>
 <div class="container-fluid m-0 sc">
-    <section id="home" class="home vh-100 p-0 m-0 d-flex justify-content-center align-items-center">
-        <div class="contentHomeSection d-flex flex-column justify-content-center align-items-center text-center w-50 rounded">
-            <div class="row w-100">
-              <div class="col-4 leftColTopHome d-flex align-items-center justify-content-center flex-column p-4">
+    <section id="home" class="home vh-100 m-0 d-flex justify-content-center align-items-center p-5">
+        <div class="contentHomeSection d-flex flex-column justify-content-center align-items-center text-center w-75 rounded h-75">
+            <div class="row w-100 h-100">
+              <div class="col-4 leftColTopHome d-flex align-items-center justify-content-center flex-column p-4 h-100">
                 <h2>Ten dzień</h2>
                 <div class="date fs-3">{{dateOfWedding}}</div>
                 <div class="timerHomeTop"></div>
-                <p>Jest dla nas naj</p>
+                <p>Dla nas najważniejszy</p>
                 <a href="" class="btn-link">Zapraszamy</a>
               </div>
-              <div class="col-8 rightColTopHome p-5 d-flex justify-content-center align-items-center flex-column">
+              <div class="col-8 rightColTopHome p-5 d-flex justify-content-center align-items-center flex-column h-100">
                 <h1 class="">{{nameOfCouple|raw}}</h1>
               </div>
             </div>
         </div>
     </section>
-    <section id="invitation" class="invitation w-100 pb-5 pt-5 mt-5 mb-5 d-flex justify-content-center align-items-center flex-column">
-        <div class="contentInvitationSection w-75 shadow-lg p-5 mb-5 bg-body rounded position-relative row">
-            <div class="leftImageInvitation col-sm-6 col-md-4 col-lg-3 position-relative">
+    <section id="invitation" class="invitation w-100 pb-5 pt-5 mt-5 mb-5 d-flex justify-content-center align-items-center flex-column position-relative">
+        <img src="/images/examplePageTwo/bohoPng.png" alt="" class="position-absolute start-0 top-0" style="width: 300px; height: 300px">  
+        <img src="/images/examplePageTwo/bohoPng.png" alt="" class="position-absolute end-0 bottom-0" style="width: 400px; height: 400px">  
+      <div class="contentInvitationSection w-75 shadow-lg p-5 mb-5 bg-body rounded position-relative row">
+            <div class="leftImageInvitation col-sm-6 col-md-6 col-lg-3 position-relative">
                 <img src="/images/examplePageTwo/examplePageTwoHomeTop.jpg" alt="" class="rounded-circle overflow-hidden mb-4 object-fit-fill position-absolute top-50 start-0 translate-middle">
             </div>
-            <div class="rightInvitationContent col-sm-6 col-md-4 col-lg-9">
+            <div class="rightInvitationContent col-sm-6 col-md-6 col-lg-9">
                 <h3 class="h3 mb-4">Zaproszenie</h3>       
-                <p >Z radością zapraszamy
-                    {{nameOfCouple}}
+                <p>Z radością zapraszamy
+                    <b>{{nameOfCouple}}</b>
                     na uroczystość zaślubin,
                     która odbędzie się
-                    {{dateOfWedding}} o godzinie 13:00
+                    <br/>
+                    <br/>
+                    <b>{{dateOfWedding}}</b> o godzinie <b>13:00</b>
                     w Kościele Matki Boskiej, Warszawa.
                     Po ceremonii serdecznie zapraszamy na przyjęcie weselne,
                     które odbędzie się w [Miejsce przyjęcia].
-                    <b>
-                    Prosimy o potwierdzenie przybycia do 12.08.2025.
-                    <b>
+                    <br/>
+                    <br/>
+                    <b>Prosimy o potwierdzenie przybycia do 12.08.2025.</b>
+                    <br/>
+                    <br/>
                     Z miłością i radością,
-                    <span class="position-absolute bottom-0 end-0 p-4">
+                    <span class="position-absolute bottom-0 end-0 p-4 signature">
                       {{nameOfCouple}}
                     </span>
                 </p>    
@@ -87,7 +93,7 @@
         <h2 class="h2 mb-2">Gdzie i kiedy</h2>
         <div class="container-fluid mx-auto mt-4 d-flex justify-content-center">
           <div class="row row-cols-1 row-cols-md-2 gx-4 gy-3 text-center w-100">
-            <div class="boxPlace col d-flex flex-column justify-content-center align-items-center pt-5 pb-5" style="background: url(/images/placeWedding.jpg);">
+            <div class="boxPlace col d-flex flex-column justify-content-center align-items-center pt-5 pb-5" style="background: url(/images/examplePageTwo/placeWedding.jpg);">
                 <div class="w-75">
                   <h3>Ślub</h3>
                 <ul class="grid list-unstyled p-4 g-1">
@@ -104,7 +110,7 @@
 
                 </div>
             </div>
-            <div class="boxPlace col d-flex flex-column justify-content-center align-items-center pt-5 pb-5" style="background: url(/images/placeWeddingReceptions.jpg);">
+            <div class="boxPlace col d-flex flex-column justify-content-center align-items-center pt-5 pb-5" style="background: url(/images/examplePageTwo/placeWeddingReceptions.jpg);">
                 <div class="w-75 ">
                   <h3>Wesele</h3>
                   <ul class="grid list-unstyled p-4 g-1" >
@@ -124,8 +130,10 @@
         </div>
       </div>
     </section>
-    <section id="attractions" class="attractions w-100 p-5 d-flex justify-content-center align-items-center flex-column mb-5">
-        <div class="w-100 text-center" >
+    <section id="attractions" class="attractions w-100 p-5 d-flex justify-content-center align-items-center flex-column mb-5 position-relative">
+      <img src="/images/examplePageTwo/bohoPng.png" alt="" class="position-absolute start-0 top-0" style="width: 200px; height: 200px">  
+        <img src="/images/examplePageTwo/bohoPng.png" alt="" class="position-absolute end-0 top-0" style="width: 300px; height: 300px">    
+      <div class="w-100 text-center" >
             <h2 class="h2 mb-2">Atrakcje</h2>
             <div class="boxAttractions mt-2 position-relative">
               <p class="">Oto lista atrakcji, która na Was czeka: </p>
@@ -229,10 +237,12 @@
               </div>
             </div>
     </section>
-    <section id="contact" class="contact container w-100 d-flex justify-content-center align-items-center flex-column p-5">
-        <h2 >Kontakt</h2>
+    <section id="contact" class="contact container-fluid w-100 d-flex justify-content-center align-items-center flex-column p-5 position-relative">
+      <img src="/images/examplePageTwo/bohoPng.png" alt="" class="position-absolute start-0 bottom-50 translate-middle-x" style="width: 250px; height: 250px">  
+      <img src="/images/examplePageTwo/bohoPng.png" alt="" class="position-absolute end-0 top-0" style="width: 300px; height: 300px">     
+      <h2 >Kontakt</h2>
         <p>Jeżeli macie jakieś pytania śmiało dzwońcie/piszcie na wszystko odpowiemy.</p>
-        <div class="container-fluid mx-auto mt-4">
+        <div class="container mx-auto mt-4">
             <div class="row row-cols-1 row-cols-md-2 gx-4 gy-3 text-center">
                 <div class="col text-center">
                   <div class="p-5 contactLeftContent rounded h-100">
@@ -269,12 +279,6 @@
             </div>
         </div>
     </section>
-    <footer class="d-flex align-items-center justify-content-center flex-column mt-5">
-        <div class="footerContentBox p-5 rounded w-50 text-center">
-          <p>Zapraszamy !!!</p>
-          <h1>{{nameOfCouple}}</h1>
-        </div>
-    </footer>
 </div>
 
 <div class="modal fade" id="exampleModalConfirm" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
