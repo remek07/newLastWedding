@@ -15,9 +15,9 @@
 -->
         <nav class="container-fluid position-fixed top-0 start-50 translate-middle-x z-1 bg-transparent p-0 m-0">
             <div class="row d-flex justify-content-between align-items-center">
-                <div class=" d-flex justify-content-center align-items-center">
-                    <ul class="nav nav-pills">
-                        <li class="nav-item p-2">
+                <div class=" d-flex justify-content-center align-items-center position-relative">
+                    <ul class="nav nav-pills position-relative">
+                        <li class="nav-item p-2 position-relative">
                             <a class="nav-link" href="#home">Strona główna</a>
                         </li>
                         <li class="nav-item p-2">
@@ -59,6 +59,8 @@
     <section id="invitation" class="invitation w-100 pb-5 pt-5 mt-5 mb-5 d-flex justify-content-center align-items-center flex-column position-relative">
         <img src="/images/examplePageTwo/bohoPng.png" alt="" class="position-absolute start-0 top-0" style="width: 300px; height: 300px">  
         <img src="/images/examplePageTwo/bohoPng.png" alt="" class="position-absolute end-0 bottom-0" style="width: 400px; height: 400px">  
+        <img src="/images/examplePageTwo/bohoPngTwo.png" alt="" class="position-absolute end-0 top-0" style="width: 100px; height: 100px; transform: rotate(-120deg) translateY(-120px);">  
+
       <div class="contentInvitationSection w-75 shadow-lg p-5 mb-5 bg-body rounded position-relative row">
             <div class="leftImageInvitation col-sm-6 col-md-6 col-lg-3 position-relative">
                 <img src="/images/examplePageTwo/examplePageTwoHomeTop.jpg" alt="" class="rounded-circle overflow-hidden mb-4 object-fit-fill position-absolute top-50 start-0 translate-middle">
@@ -136,7 +138,7 @@
       <div class="w-100 text-center" >
             <h2 class="h2 mb-2">Atrakcje</h2>
             <div class="boxAttractions mt-2 position-relative">
-              <p class="">Oto lista atrakcji, która na Was czeka: </p>
+              <p class="fs-4">Oto lista atrakcji, która na Was czeka: </p>
                 <ul class="list-unstyled row justify-content-md-center w-100">
                     {% for attraction in attractions %}
                     <li class="col d-flex flex-column justify-content-center align-items-start m-4 p-4 rounded shadow-lg">
@@ -161,7 +163,7 @@
                   <div class="p-4 bg-light border rounded shadow-sm">
                     <div class="row align-items-center">
                       <div class="col-6 text-start">
-                        <p class="m-0">Zestaw do robienia sushi</p>
+                        <p class="m-0 fs-4">Zestaw do robienia sushi</p>
                       </div>
                       <div class="col">
                         <a href="#">Link</a>
@@ -176,7 +178,7 @@
                     <div class="p-4 bg-light border rounded shadow-sm">
                       <div class="row align-items-center">
                         <div class="col-6 text-start">
-                          <p class="m-0">Zdrapki na loterię</p>
+                          <p class="m-0 fs-4">Zdrapki na loterię</p>
                         </div>
                         <div class="col">
                           <a href="#">Link</a>
@@ -192,7 +194,7 @@
                     <div class="p-4 bg-light border rounded shadow-sm">
                       <div class="row align-items-center">
                         <div class="col-6 text-start">
-                          <p class="m-0">Robot kuchenny</p>
+                          <p class="m-0 fs-4">Robot kuchenny</p>
                         </div>
                         <div class="col">
                           <a href="#">Link</a>
@@ -207,7 +209,7 @@
                     <div class="p-4 bg-light border rounded shadow-sm">
                       <div class="row align-items-center">
                         <div class="col-6 text-start">
-                          <p class="m-0">Ekspres do kawy</p>
+                          <p class="m-0 fs-4">Ekspres do kawy</p>
                         </div>
                         <div class="col">
                           <a href="#">Link</a>
@@ -222,7 +224,7 @@
                     <div class="p-4 bg-light border rounded shadow-sm">
                       <div class="row align-items-center">
                         <div class="col-6 text-start">
-                          <p class="m-0">Album na wspólne wspomnienia</p>
+                          <p class="m-0 fs-4">Album na zdjęcia</p>
                         </div>
                         <div class="col">
                           <a href="#">Link</a>
@@ -241,7 +243,7 @@
       <img src="/images/examplePageTwo/bohoPng.png" alt="" class="position-absolute start-0 bottom-50 translate-middle-x" style="width: 250px; height: 250px">  
       <img src="/images/examplePageTwo/bohoPng.png" alt="" class="position-absolute end-0 top-0" style="width: 300px; height: 300px">     
       <h2 >Kontakt</h2>
-        <p>Jeżeli macie jakieś pytania śmiało dzwońcie/piszcie na wszystko odpowiemy.</p>
+        <p class="fs-4">Jeżeli macie jakieś pytania śmiało dzwońcie/piszcie na wszystko odpowiemy.</p>
         <div class="container mx-auto mt-4">
             <div class="row row-cols-1 row-cols-md-2 gx-4 gy-3 text-center">
                 <div class="col text-center">

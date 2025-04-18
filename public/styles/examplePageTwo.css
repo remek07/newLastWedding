@@ -27,8 +27,20 @@ h1,h2,h3,h4,h5,h6{
 }
 h2{
   font-size: 4rem !important;
+  position: relative !important;
 }
-
+h2::after{
+  content: '';
+  display: block;
+  height: 80px;
+  width: 100px;
+  background-image: url(../images/examplePageTwo/bohoPngTwo.png);
+  background-size: cover;
+  position: absolute;
+  right: -120px;
+  top: 50%;
+  transform: translateY(-50%);
+}
 h3{
   font-size: 3.2rem !important;
 }
@@ -74,9 +86,10 @@ nav div div ul li a:hover{
   border-color: var(--fontColor) !important;
 }
 a.btn-link{
-  color: var(--colorHomeWhite) !important;
+  color:#fff !important;
   font-family: var(--fontBody);
-  font-size: 1rem;
+  font-size: 1.2rem;
+  font-weight: 500;
   text-decoration: none !important;
   display: inline-block;
   padding: 0.75rem 0.75rem;
@@ -85,6 +98,13 @@ a.btn-link{
   line-height: 1.5;
   vertical-align: middle;
   letter-spacing: 1px;
+  border: 1px solid var(--fontColor);
+  text-shadow: none !important;
+  transition: all 0.2s;
+}
+a.btn-link:hover{
+  color: var(--fontColor) !important;
+  background-color: #fff !important;
   border: 1px solid var(--fontColor);
 }
 iframe{
@@ -174,7 +194,7 @@ section.place .boxPlace ul li p{
   background-color: var(--colorWhite);
 }
 .boxAttractions ul li .contentAttractionBox{
-  border: 2px solid var(--colorBackground);
+  border: 1px solid var(--colorBackground);
   background-color: var(--colorWhite);
 }
 .boxAttractions ul li .contentAttractionBox i{
