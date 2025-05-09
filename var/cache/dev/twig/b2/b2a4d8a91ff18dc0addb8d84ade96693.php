@@ -361,87 +361,8 @@ class __TwigTemplate_6c1ecaa257b0d714e46df655ac23b841 extends Template
     <div class=\"giftsContent\">
         <h2>Lista prezentów</h2>
         <ul id=\"listGift\">
-            ";
-        // line 168
-        $context['_parent'] = $context;
-        $context['_seq'] = CoreExtension::ensureTraversable((isset($context["prezenty"]) || array_key_exists("prezenty", $context) ? $context["prezenty"] : (function () { throw new RuntimeError('Variable "prezenty" does not exist.', 168, $this->source); })()));
-        foreach ($context['_seq'] as $context["_key"] => $context["prezent"]) {
-            // line 169
-            yield "                <li>
-                    ";
-            // line 170
-            if ((CoreExtension::getAttribute($this->env, $this->source, $context["prezent"], "zarezerwowany", [], "any", false, false, false, 170) != null)) {
-                // line 171
-                yield "                        ";
-                if ((CoreExtension::getAttribute($this->env, $this->source, $context["prezent"], "link", [], "any", false, false, false, 171) != null)) {
-                    // line 172
-                    yield "                            <span style=\"text-decoration: line-through;\">";
-                    yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["prezent"], "nazwa", [], "any", false, false, false, 172), "html", null, true);
-                    yield "</span> 
-                            <span><a href='";
-                    // line 173
-                    yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["prezent"], "link", [], "any", false, false, false, 173), "html", null, true);
-                    yield "' target=\"_blank\">Link</a></span> 
-                            <input type=\"checkbox\" class=\"rezerwuj-checkbox\" data-id=\"";
-                    // line 174
-                    yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["prezent"], "id", [], "any", false, false, false, 174), "html", null, true);
-                    yield "\" disabled>
-                        ";
-                } else {
-                    // line 176
-                    yield "                            <span style=\"text-decoration: line-through;\">";
-                    yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["prezent"], "nazwa", [], "any", false, false, false, 176), "html", null, true);
-                    yield "</span>
-                            <span></span> 
-                            <input type=\"checkbox\" class=\"rezerwuj-checkbox\" data-id=\"";
-                    // line 178
-                    yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["prezent"], "id", [], "any", false, false, false, 178), "html", null, true);
-                    yield "\" disabled>
-                        ";
-                }
-                // line 180
-                yield "                    ";
-            } else {
-                // line 181
-                yield "                        ";
-                if ((CoreExtension::getAttribute($this->env, $this->source, $context["prezent"], "link", [], "any", false, false, false, 181) != null)) {
-                    // line 182
-                    yield "                            <span>";
-                    yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["prezent"], "nazwa", [], "any", false, false, false, 182), "html", null, true);
-                    yield "</span> 
-                            <span><a href='";
-                    // line 183
-                    yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["prezent"], "link", [], "any", false, false, false, 183), "html", null, true);
-                    yield "' target=\"_blank\">Link</a></span> 
-                            <input type=\"checkbox\" class=\"rezerwuj-checkbox\" data-id=\"";
-                    // line 184
-                    yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["prezent"], "id", [], "any", false, false, false, 184), "html", null, true);
-                    yield "\">
-                        ";
-                } else {
-                    // line 186
-                    yield "                            <span>";
-                    yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["prezent"], "nazwa", [], "any", false, false, false, 186), "html", null, true);
-                    yield "</span> 
-                            <span></span> 
-                            <input type=\"checkbox\" class=\"rezerwuj-checkbox\" data-id=\"";
-                    // line 188
-                    yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["prezent"], "id", [], "any", false, false, false, 188), "html", null, true);
-                    yield "\">
-                        ";
-                }
-                // line 190
-                yield "                    ";
-            }
-            // line 191
-            yield "                </li>
-            ";
-        }
-        $_parent = $context['_parent'];
-        unset($context['_seq'], $context['_key'], $context['prezent'], $context['_parent']);
-        $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 193
-        yield "        </ul>
+
+        </ul>
     </div>
 </section>
     <!-- Pop-up do rezerwacji prezentu -->
@@ -457,8 +378,8 @@ class __TwigTemplate_6c1ecaa257b0d714e46df655ac23b841 extends Template
     // czasomierze na stronie głównej
     document.addEventListener(\"DOMContentLoaded\", function () {
         const targetTimestamp = ";
-        // line 208
-        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape((isset($context["targetTimestampDate"]) || array_key_exists("targetTimestampDate", $context) ? $context["targetTimestampDate"] : (function () { throw new RuntimeError('Variable "targetTimestampDate" does not exist.', 208, $this->source); })()), "html", null, true);
+        // line 184
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape((isset($context["targetTimestampDate"]) || array_key_exists("targetTimestampDate", $context) ? $context["targetTimestampDate"] : (function () { throw new RuntimeError('Variable "targetTimestampDate" does not exist.', 184, $this->source); })()), "html", null, true);
         yield " * 1000;// zamian na milisekundy
         function updateCountdown() {
             const now = new Date().getTime();
@@ -485,18 +406,18 @@ class __TwigTemplate_6c1ecaa257b0d714e46df655ac23b841 extends Template
     });
 </script>
 ";
-        // line 233
+        // line 209
         $context['_parent'] = $context;
-        $context['_seq'] = CoreExtension::ensureTraversable(CoreExtension::getAttribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 233, $this->source); })()), "flashes", ["success"], "method", false, false, false, 233));
+        $context['_seq'] = CoreExtension::ensureTraversable(CoreExtension::getAttribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 209, $this->source); })()), "flashes", ["success"], "method", false, false, false, 209));
         foreach ($context['_seq'] as $context["_key"] => $context["message"]) {
-            // line 234
+            // line 210
             yield "    <script>
         // Pop up z informacją o potwierdzeniu obecności
         window.onload = function() {
             // Tworzymy pop up
             let popup = document.createElement(\"div\");
             popup.textContent = \"";
-            // line 239
+            // line 215
             yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($context["message"], "html", null, true);
             yield "\";
             popup.style.position = \"fixed\";
@@ -526,7 +447,7 @@ class __TwigTemplate_6c1ecaa257b0d714e46df655ac23b841 extends Template
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_key'], $context['message'], $context['_parent']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 263
+        // line 239
         yield "<script>
 
     // Pop up do rezerwacji prezentu
@@ -560,7 +481,7 @@ class __TwigTemplate_6c1ecaa257b0d714e46df655ac23b841 extends Template
             }
 
             fetch(\"";
-        // line 295
+        // line 271
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("rezerwuj_prezent");
         yield "\", {
                 method: \"POST\",
@@ -647,7 +568,7 @@ class __TwigTemplate_6c1ecaa257b0d714e46df655ac23b841 extends Template
      */
     public function getDebugInfo(): array
     {
-        return array (  564 => 295,  530 => 263,  500 => 239,  493 => 234,  489 => 233,  461 => 208,  444 => 193,  437 => 191,  434 => 190,  429 => 188,  423 => 186,  418 => 184,  414 => 183,  409 => 182,  406 => 181,  403 => 180,  398 => 178,  392 => 176,  387 => 174,  383 => 173,  378 => 172,  375 => 171,  373 => 170,  370 => 169,  366 => 168,  354 => 159,  349 => 157,  343 => 154,  339 => 153,  333 => 150,  329 => 149,  323 => 146,  319 => 145,  314 => 143,  302 => 133,  295 => 131,  293 => 130,  286 => 128,  282 => 127,  279 => 126,  274 => 125,  256 => 109,  249 => 107,  247 => 106,  240 => 104,  236 => 103,  233 => 102,  228 => 101,  214 => 89,  207 => 87,  205 => 86,  198 => 84,  194 => 83,  190 => 82,  187 => 81,  182 => 80,  166 => 67,  105 => 8,  95 => 7,  86 => 5,  76 => 4,  59 => 3,  42 => 1,);
+        return array (  485 => 271,  451 => 239,  421 => 215,  414 => 210,  410 => 209,  382 => 184,  354 => 159,  349 => 157,  343 => 154,  339 => 153,  333 => 150,  329 => 149,  323 => 146,  319 => 145,  314 => 143,  302 => 133,  295 => 131,  293 => 130,  286 => 128,  282 => 127,  279 => 126,  274 => 125,  256 => 109,  249 => 107,  247 => 106,  240 => 104,  236 => 103,  233 => 102,  228 => 101,  214 => 89,  207 => 87,  205 => 86,  198 => 84,  194 => 83,  190 => 82,  187 => 81,  182 => 80,  166 => 67,  105 => 8,  95 => 7,  86 => 5,  76 => 4,  59 => 3,  42 => 1,);
     }
 
     public function getSourceContext(): Source
@@ -819,31 +740,7 @@ class __TwigTemplate_6c1ecaa257b0d714e46df655ac23b841 extends Template
     <div class=\"giftsContent\">
         <h2>Lista prezentów</h2>
         <ul id=\"listGift\">
-            {% for prezent in prezenty %}
-                <li>
-                    {% if prezent.zarezerwowany != NULL %}
-                        {% if prezent.link != NULL %}
-                            <span style=\"text-decoration: line-through;\">{{ prezent.nazwa }}</span> 
-                            <span><a href='{{ prezent.link }}' target=\"_blank\">Link</a></span> 
-                            <input type=\"checkbox\" class=\"rezerwuj-checkbox\" data-id=\"{{ prezent.id }}\" disabled>
-                        {% else %}
-                            <span style=\"text-decoration: line-through;\">{{ prezent.nazwa }}</span>
-                            <span></span> 
-                            <input type=\"checkbox\" class=\"rezerwuj-checkbox\" data-id=\"{{ prezent.id }}\" disabled>
-                        {% endif %}
-                    {% else %}
-                        {% if prezent.link != NULL %}
-                            <span>{{ prezent.nazwa }}</span> 
-                            <span><a href='{{ prezent.link }}' target=\"_blank\">Link</a></span> 
-                            <input type=\"checkbox\" class=\"rezerwuj-checkbox\" data-id=\"{{ prezent.id }}\">
-                        {% else %}
-                            <span>{{ prezent.nazwa }}</span> 
-                            <span></span> 
-                            <input type=\"checkbox\" class=\"rezerwuj-checkbox\" data-id=\"{{ prezent.id }}\">
-                        {% endif %}
-                    {% endif %}
-                </li>
-            {% endfor %}
+
         </ul>
     </div>
 </section>

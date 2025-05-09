@@ -46,9 +46,8 @@
               <div class="col-4 leftColTopHome d-flex align-items-center justify-content-center flex-column p-4 h-100">
                 <h2>Ten dzień</h2>
                 <div class="date fs-3">{{dateOfWedding}}</div>
-                <div class="timerHomeTop"></div>
                 <p>Dla nas najważniejszy</p>
-                <a href="" class="btn-link">Zapraszamy</a>
+                <a href="#invitation" class="btn-link">Zapraszamy</a>
               </div>
               <div class="col-8 rightColTopHome p-5 d-flex justify-content-center align-items-center flex-column h-100">
                 <h1 class="">{{nameOfCouple|raw}}</h1>
@@ -63,7 +62,7 @@
 
       <div class="contentInvitationSection w-75 shadow-lg p-5 mb-5 bg-body rounded position-relative row">
             <div class="leftImageInvitation col-sm-6 col-md-6 col-lg-3 position-relative">
-                <img src="/images/examplePageTwo/examplePageTwoHomeTop.jpg" alt="" class="rounded-circle overflow-hidden mb-4 object-fit-fill position-absolute top-50 start-0 translate-middle">
+                <img src="/images/examplePageTwo/imageInvitation.png" alt="" class="rounded-circle overflow-hidden mb-4 object-fit-fill position-absolute top-50 start-0 translate-middle">
             </div>
             <div class="rightInvitationContent col-sm-6 col-md-6 col-lg-9">
                 <h3 class="h3 mb-4">Zaproszenie</h3>       
@@ -91,33 +90,39 @@
         </div>
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalConfirm" data-bs-whatever="@getbootstrap">Potwierdź obecność</button>
     </section>
-    <section id="place" class="place d-flex justify-content-center align-items-center flex-column mb-5">
-        <h2 class="h2 mb-2">Gdzie i kiedy</h2>
-        <div class="container-fluid mx-auto mt-4 d-flex justify-content-center">
-          <div class="row row-cols-1 row-cols-md-2 gx-4 gy-3 text-center w-100">
-            <div class="boxPlace col d-flex flex-column justify-content-center align-items-center pt-5 pb-5" style="background: url(/images/examplePageTwo/placeWedding.jpg);">
-                <div class="w-75">
-                  <h3>Ślub</h3>
-                <ul class="grid list-unstyled p-4 g-1">
-                    {% for dataOfWedding in datasOfWedding %}
-                    <li class="m-1 p-2">
-                        <h5>{{ dataOfWedding.header }}</h5>
-                        <p>{{ dataOfWedding.content }}</p>
-                    </li>
-                    {% else %}
-                        <li>Brak danych</li>
-                    {% endfor %}
-                </ul>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6952.663600538601!2d18.546370629973982!3d50.09254172869486!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47114f28e4e95de7%3A0x57dff1961fa217f6!2sRybnik%20Plaza!5e1!3m2!1spl!2spl!4v1744008210592!5m2!1spl!2spl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="w-75"></iframe>
-
-                </div>
+    <section id="place" class="place d-flex justify-content-center align-items-center flex-column mb-5 overflow-hidden">
+        <h2 class="h2 mb-2 mt-5">Gdzie i kiedy</h2>
+        <div class="container-fluid row row-cols-md-2">
+          <div class="boxPlace col d-flex flex-column justify-content-center align-items-center pt-5 pb-5">
+            <div class="w-75 boxPlaceContent position-relative">
+              <h3 class="text-center topTitle">Ślub</h3>
+            <ul class="grid list-unstyled p-4 g-1">
+                {% for dataOfWedding in datasOfWedding %}
+                <li class=" p-2 rounded">
+                    <h5>{{ dataOfWedding.header }}</h5>
+                    <p>{{ dataOfWedding.content }}</p>
+                </li>
+                {% else %}
+                    <li>Brak danych</li>
+                {% endfor %}
+            </ul>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6952.663600538601!2d18.546370629973982!3d50.09254172869486!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47114f28e4e95de7%3A0x57dff1961fa217f6!2sRybnik%20Plaza!5e1!3m2!1spl!2spl!4v1744008210592!5m2!1spl!2spl" width="100%" height="300px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
-            <div class="boxPlace col d-flex flex-column justify-content-center align-items-center pt-5 pb-5" style="background: url(/images/examplePageTwo/placeWeddingReceptions.jpg);">
+        </div>
+        <div class="col overflow-hidden position-relative">
+          <img src="/images/examplePageTwo/placeWedding.jpg" alt="" srcset="" class="position-absolute top-50 translate-middle-y start-0" style="width: 100%; clip-path: polygon(25% 0%, 100% 1%, 100% 100%, 25% 100%, 0% 50%);">
+        </div>
+        </div>
+          <div class="container-fluid row row-cols-1 row-cols-md-2 gx-4 gy-3 text-center w-100">
+            <div class="col overflow-hidden position-relative">
+              <img src="/images/examplePageTwo/placeWeddingReceptions.jpg" alt="" srcset="" class="position-absolute top-50 translate-middle-y start-0" style="width: 100%; clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);">
+            </div>
+            <div class="boxPlace col d-flex flex-column justify-content-center align-items-center pt-5 pb-5">
                 <div class="w-75 ">
-                  <h3>Wesele</h3>
+                  <h3 class="text-center">Wesele</h3>
                   <ul class="grid list-unstyled p-4 g-1" >
                       {% for dataOfWeddingReception in datasOfWeddingReception %}
-                      <li class="m-1 p-2">
+                      <li class=" p-2 rounded">
                           <h5>{{ dataOfWeddingReception.header }}</h5>
                           <p>{{ dataOfWeddingReception.content }}</p>
                       </li>
@@ -125,18 +130,17 @@
                           <li>Brak danych</li>
                       {% endfor %}
                   </ul>                  
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6952.663600538601!2d18.546370629973982!3d50.09254172869486!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47114f28e4e95de7%3A0x57dff1961fa217f6!2sRybnik%20Plaza!5e1!3m2!1spl!2spl!4v1744008210592!5m2!1spl!2spl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="w-75"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6952.663600538601!2d18.546370629973982!3d50.09254172869486!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47114f28e4e95de7%3A0x57dff1961fa217f6!2sRybnik%20Plaza!5e1!3m2!1spl!2spl!4v1744008210592!5m2!1spl!2spl" width="100%" height="300px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
                 </div>
             </div>
         </div>
-      </div>
     </section>
     <section id="attractions" class="attractions w-100 p-5 d-flex justify-content-center align-items-center flex-column mb-5 position-relative">
       <img src="/images/examplePageTwo/bohoPng.png" alt="" class="position-absolute start-0 top-0" style="width: 200px; height: 200px">  
         <img src="/images/examplePageTwo/bohoPng.png" alt="" class="position-absolute end-0 top-0" style="width: 300px; height: 300px">    
       <div class="w-100 text-center" >
-            <h2 class="h2 mb-2">Atrakcje</h2>
+            <h2 class="h2 mb-2" style="max-width: 200px !important; margin: 0px auto;">Atrakcje</h2>
             <div class="boxAttractions mt-2 position-relative">
               <p class="fs-4">Oto lista atrakcji, która na Was czeka: </p>
                 <ul class="list-unstyled row justify-content-md-center w-100">
@@ -166,7 +170,7 @@
                         <p class="m-0 fs-4">Zestaw do robienia sushi</p>
                       </div>
                       <div class="col">
-                        <a href="#">Link</a>
+                        <a href="#" class="linkBtnGift">Link</a>
                       </div>
                       <div class="col-4 text-end">
                         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalGifts" data-bs-whatever="@getbootstrap">Zarezerwuj</button>
@@ -181,7 +185,7 @@
                           <p class="m-0 fs-4">Zdrapki na loterię</p>
                         </div>
                         <div class="col">
-                          <a href="#">Link</a>
+                          <a href="#" class="linkBtnGift">Link</a>
                         </div>
                         <div class="col-4 text-end">
                             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalGifts" data-bs-whatever="@getbootstrap">Zarezerwuj</button>
@@ -197,7 +201,7 @@
                           <p class="m-0 fs-4">Robot kuchenny</p>
                         </div>
                         <div class="col">
-                          <a href="#">Link</a>
+                          <a href="#" class="linkBtnGift">Link</a>
                         </div>
                         <div class="col-4 text-end">
                             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalGifts" data-bs-whatever="@getbootstrap">Zarezerwuj</button>
@@ -212,7 +216,7 @@
                           <p class="m-0 fs-4">Ekspres do kawy</p>
                         </div>
                         <div class="col">
-                          <a href="#">Link</a>
+                          <a href="#" class="linkBtnGift">Link</a>
                         </div>
                         <div class="col-4 text-end">
                             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalGifts" data-bs-whatever="@getbootstrap" disabled>Zarezerwowany</button>
@@ -227,7 +231,7 @@
                           <p class="m-0 fs-4">Album na zdjęcia</p>
                         </div>
                         <div class="col">
-                          <a href="#">Link</a>
+                          <a href="#" class="linkBtnGift">Link</a>
                         </div>
                         <div class="col-4 text-end">
                             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalGifts" data-bs-whatever="@getbootstrap">Zarezerwuj</button>
@@ -251,21 +255,34 @@
                       <div class="p-5 borderInset rounded">
                         <h4>Numery kontatkowe</h4>
                         <div class="row row-cols-1 gx-4 gy-3 text-center d-flex justify-content-center align-items-center p-4 rounded">
-                            <div class="d-flex align-items-center justify-content-center flex-column contactLeftContentBox">
+                            <div class="row contactLeftContentBox d-flex align-items-center text-end m-3">
+                              <div class="col-5 pt-3">
                                 <span><i class="fa fa-phone" aria-hidden="true"></i></span>
-                                <span>Imie Nazwisko</span>
-                                <span><a href="tel:123456789">tel. 123456789</a></span>
+                              </div>
+                              <div class="col-7 d-flex flex-column justify-content-center align-items-start">
+                                <span class="name">Imie Nazwisko</span>
+                                <span class="phone p-1 rounded"><a href="tel:323456789">+48 323456789</a></span>
+                              </div>
                             </div>
-                            <div class="d-flex align-items-center justify-content-center flex-column contactLeftContentBox">
+                            <div class="row contactLeftContentBox d-flex align-items-center text-end m-3">
+                              <div class="col-5 pt-3">
                                 <span><i class="fa fa-phone" aria-hidden="true"></i></span>
-                                <span>Imie Nazwisko</span>
-                                <span><a href="tel:123456789">tel. 123456789</a></span>
+                              </div>
+                              <div class="col-7 d-flex flex-column justify-content-center align-items-start">
+                                <span class="name">Imie Nazwisko</span>
+                                <span class="phone p-1 rounded"><a href="tel:323456789">+48 323456789</a></span>
+                              </div>
                             </div>
-                            <div class=" d-flex align-items-center justify-content-center flex-column contactLeftContentBox">
+                            <div class="row contactLeftContentBox d-flex align-items-center text-end m-3">
+                              <div class="col-5 pt-3">
                                 <span><i class="fa fa-phone" aria-hidden="true"></i></span>
-                                <span>Imie Nazwisko</span>
-                                <span><a href="tel:123456789">tel. 123456789</a></span>
+                              </div>
+                              <div class="col-7 d-flex flex-column justify-content-center align-items-start">
+                                <span class="name">Imie Nazwisko</span>
+                                <span class="phone p-1 rounded"><a href="tel:323456789">+48 323456789</a></span>
+                              </div>
                             </div>
+                            
                         </div>
                       </div>
                   </div>
@@ -282,6 +299,7 @@
         </div>
     </section>
 </div>
+
 
 <div class="modal fade" id="exampleModalConfirm" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
